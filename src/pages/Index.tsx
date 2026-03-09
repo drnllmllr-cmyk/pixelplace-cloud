@@ -6,6 +6,7 @@ import TechStackSection from "@/components/TechStackSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import PricingSection from "@/components/PricingSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import PixelDissolveDivider from "@/components/PixelDissolveDivider";
@@ -47,7 +48,12 @@ const Index = () => {
         <TestimonialsSection />
       </SectionTransition>
 
-      <PixelDissolveDivider color="cyan" density={20} />
+      <PixelDissolveDivider color="cyan" density={25} />
+      <SectionTransition direction="left">
+        <PricingSection />
+      </SectionTransition>
+
+      <PixelDissolveDivider color="purple" density={20} />
       <SectionTransition>
         <ContactSection />
       </SectionTransition>

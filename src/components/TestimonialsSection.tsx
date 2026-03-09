@@ -127,6 +127,32 @@ const TestimonialsSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Logo Carousel */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <p className="text-center text-xs text-muted-foreground uppercase tracking-widest font-display mb-8">
+            Trusted by innovative companies
+          </p>
+          <div className="relative overflow-hidden max-w-4xl mx-auto">
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="flex animate-[scroll_20s_linear_infinite] w-max gap-16 items-center">
+              {[...partnerLogos, ...partnerLogos].map((logo, i) => (
+                <span
+                  key={`${logo.name}-${i}`}
+                  className={`text-lg font-display font-bold ${logo.accent} opacity-40 hover:opacity-80 transition-opacity whitespace-nowrap`}
+                >
+                  {logo.name}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

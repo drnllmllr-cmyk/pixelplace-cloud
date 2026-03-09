@@ -146,3 +146,8 @@
     background: radial-gradient(ellipse at 50% 0%, hsl(186 100% 50% / 0.08) 0%, transparent 60%);
   }
 }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

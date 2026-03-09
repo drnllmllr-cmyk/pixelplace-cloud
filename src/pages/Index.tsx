@@ -8,19 +8,50 @@ import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import PixelDissolveDivider from "@/components/PixelDissolveDivider";
+import SectionTransition from "@/components/SectionTransition";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <TechStackSection />
-      <WhyChooseSection />
-      <PortfolioSection />
-      <TestimonialsSection />
-      <ContactSection />
+
+      <PixelDissolveDivider color="cyan" />
+      <SectionTransition>
+        <ServicesSection />
+      </SectionTransition>
+
+      <PixelDissolveDivider color="purple" density={30} />
+      <SectionTransition direction="left">
+        <AboutSection />
+      </SectionTransition>
+
+      <PixelDissolveDivider color="green" density={35} />
+      <SectionTransition>
+        <TechStackSection />
+      </SectionTransition>
+
+      <PixelDissolveDivider color="cyan" density={25} />
+      <SectionTransition direction="right">
+        <WhyChooseSection />
+      </SectionTransition>
+
+      <PixelDissolveDivider color="purple" />
+      <SectionTransition>
+        <PortfolioSection />
+      </SectionTransition>
+
+      <PixelDissolveDivider color="green" density={30} />
+      <SectionTransition>
+        <TestimonialsSection />
+      </SectionTransition>
+
+      <PixelDissolveDivider color="cyan" density={20} />
+      <SectionTransition>
+        <ContactSection />
+      </SectionTransition>
+
       <Footer />
     </div>
   );

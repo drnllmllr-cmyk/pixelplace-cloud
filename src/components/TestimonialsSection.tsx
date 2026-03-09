@@ -1,5 +1,15 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+
+const partnerLogos = [
+  { name: "NexaFlow", accent: "text-primary" },
+  { name: "Vaultrix", accent: "text-secondary" },
+  { name: "DataPulse", accent: "text-accent" },
+  { name: "CloudBridge", accent: "text-primary" },
+  { name: "SynapseAI", accent: "text-secondary" },
+  { name: "Orbitec", accent: "text-accent" },
+];
 
 const testimonials = [
   {

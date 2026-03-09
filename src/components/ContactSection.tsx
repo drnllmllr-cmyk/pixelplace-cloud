@@ -1,15 +1,32 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", description: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // placeholder
-    alert("Thank you! We'll be in touch soon.");
-    setForm({ name: "", email: "", company: "", description: "" });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("notify-contact", {
+        body: form,
+      });
+
+      if (error) throw error;
+
+      toast.success("Message sent! We'll be in touch soon.");
+      setForm({ name: "", email: "", company: "", description: "" });
+    } catch (err) {
+      console.error("Submission error:", err);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -47,6 +64,7 @@ const ContactSection = () => {
                 value={form[f.key as keyof typeof form]}
                 onChange={(e) => setForm({ ...form, [f.key]: e.target.value })}
                 className="w-full bg-muted/50 border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
+                disabled={isSubmitting}
               />
             </div>
           ))}
@@ -58,11 +76,16 @@ const ContactSection = () => {
               value={form.description}
               onChange={(e) => setForm({ ...form, description: e.target.value })}
               className="w-full bg-muted/50 border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none"
+              disabled={isSubmitting}
             />
           </div>
-          <button type="submit" className="btn-glow w-full py-3.5 rounded-lg font-semibold text-primary-foreground flex items-center justify-center gap-2">
-            <Send size={18} />
-            Send Message
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="btn-glow w-full py-3.5 rounded-lg font-semibold text-primary-foreground flex items-center justify-center gap-2 disabled:opacity-50"
+          >
+            {isSubmitting ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </motion.form>
       </div>

@@ -10,7 +10,7 @@ const techs = [
 ];
 
 const TechStackSection = () => (
-  <section id="technology" className="relative py-24 bg-grid">
+  <section id="hd wallpaper" className="relative py-24 bg-grid">
     <div className="absolute inset-0 bg-radial-glow" />
     <div className="relative z-10 container mx-auto px-4 text-center">
       <motion.h2

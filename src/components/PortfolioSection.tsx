@@ -7,7 +7,7 @@ const projects = [
 ];
 
 const PortfolioSection = () => (
-  <section id="solutions" className="relative py-24 bg-grid">
+  <section id="penetration testing" className="relative py-24 bg-grid">
     <div className="absolute inset-0 bg-radial-glow" />
     <div className="relative z-10 container mx-auto px-4">
       <motion.div

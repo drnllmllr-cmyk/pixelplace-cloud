@@ -10,7 +10,7 @@ const techs = [
 ];
 
 const TechStackSection = () => (
-  <section id="technology" className="relative py-24 bg-grid">
+  <section id="hd wallpaper" className="relative py-24 bg-grid">
     <div className="absolute inset-0 bg-radial-glow" />
     <div className="relative z-10 container mx-auto px-4 text-center">
       <motion.h2
@@ -19,7 +19,7 @@ const TechStackSection = () => (
         viewport={{ once: true }}
         className="text-3xl md:text-5xl font-display font-bold mb-16"
       >
-        Technology <span className="text-gradient-primary">Stack</span>
+        HD Wallpaper <span className="text-gradient-primary">Gallery</span>
       </motion.h2>
 
       <div className="flex flex-wrap justify-center gap-8 md:gap-12">

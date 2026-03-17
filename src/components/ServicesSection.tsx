@@ -3,9 +3,9 @@ import { Globe, Cloud, ShieldCheck, Bot } from "lucide-react";
 
 const services = [
   { icon: Globe, title: "Web Development", desc: "Modern, responsive web applications built with cutting-edge frameworks and optimized for performance.", color: "neon-cyan" },
-  { icon: Cloud, title: "Cloud Infrastructure", desc: "Scalable cloud architecture with automated deployments, monitoring, and high availability.", color: "neon-blue" },
-  { icon: ShieldCheck, title: "Cybersecurity Solutions", desc: "Enterprise-grade security with threat detection, encryption, and compliance frameworks.", color: "neon-green" },
-  { icon: Bot, title: "AI Automation & Tools", desc: "Intelligent automation powered by machine learning and custom AI solutions for your business.", color: "neon-purple" },
+  { icon: Cloud, title: "HD Wallpaper", desc: "HD AI Enhanced beautiful pictures of South Florida, beaches, historic locations, national parks and more.", color: "neon-blue" },
+  { icon: ShieldCheck, title: "Security Assessments", desc: "Security scanning, vulnerability scanning, open ports, reporting, Red Teaming.", color: "neon-green" },
+  { icon: Bot, title: "Penetration Testing", desc: "Remote Penetration Testing, Web Applications, Mobile Apps, APIs, Cloud Infrastructure, Networking Penetration Testing.", color: "neon-purple" },
 ];
 
 const colorMap: Record<string, string> = {

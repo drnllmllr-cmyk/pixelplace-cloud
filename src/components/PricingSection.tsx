@@ -20,7 +20,7 @@ const tiers = [
   },
   {
     name: "Pro",
-    price: "$6,999",
+    price: "$699.00",
     period: "/project",
     description: "For growing teams that need robust solutions",
     icon: Shield,

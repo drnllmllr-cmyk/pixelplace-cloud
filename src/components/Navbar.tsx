@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Services", "About", "Technology", "Penetration Testing", "Contact"];
+const navItems = ["Services", "About", "HD Wallpaper", "Web Development", "Penetration Testing", "Contact"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

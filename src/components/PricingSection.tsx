@@ -4,7 +4,7 @@ import { Check, Zap, Shield, Rocket } from "lucide-react";
 const tiers = [
   {
     name: "Starter",
-    price: "$2,499",
+    price: "$249.00",
     period: "/project",
     description: "Perfect for small businesses getting started",
     icon: Zap,

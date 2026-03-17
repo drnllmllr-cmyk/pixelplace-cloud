@@ -14,10 +14,10 @@ const AboutSection = () => (
             About <span className="text-gradient-primary">PixelPlace</span>
           </h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            PixelPlace.cloud provides modern cloud architecture, secure digital infrastructure, and AI-powered business tools. We help organizations transform their digital presence with enterprise-grade solutions that scale.
+            PixelPlace.cloud delivers secure, high-performance digital solutions for modern businesses. We specialize in custom website development, professional penetration testing, security assessments, and AI-enhanced digital content to help brands grow and stay protected online.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Our team of cloud architects, security engineers, and AI specialists work together to deliver solutions that are secure, scalable, and built for the future.
+            Led by professionals with over 20 years of hands-on experience, we work with startups, small businesses, and enterprise clients to build scalable systems, identify vulnerabilities, and strengthen their digital presence.
           </p>
         </motion.div>
 

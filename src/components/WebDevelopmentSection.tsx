@@ -9,7 +9,7 @@ const features = [
 ];
 
 const WebDevelopmentSection = () => (
-  <section id="web development" className="relative py-24">
+  <section id="website development" className="relative py-24">
     <div className="container mx-auto px-4">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -18,7 +18,7 @@ const WebDevelopmentSection = () => (
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-          Web <span className="text-gradient-primary">Development</span>
+          Website <span className="text-gradient-primary">Development</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
           Custom websites and web applications built for performance, scalability, and security.

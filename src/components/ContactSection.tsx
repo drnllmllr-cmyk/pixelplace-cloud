@@ -1,37 +1,43 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
-
-const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbyGOh27ntjI2-PGsxj2CEDxsfXXh9WgUcvrOtPYcTPOwHi09dgv7bICwrdMOdHogAemTw/exec";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", description: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("Something went wrong. Please try again.");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus("idle");
+    setErrorMessage("Something went wrong. Please try again.");
 
     try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
+      const { data, error } = await supabase.functions.invoke("notify-contact", {
+        body: {
           name: form.name,
           email: form.email,
           company: form.company,
           description: form.description,
-        }).toString(),
+        },
       });
 
-      // no-cors means we can't read the response, but the request goes through
+      if (error) {
+        throw new Error(error.message || "Failed to submit the message.");
+      }
+
+      if (!data?.success) {
+        throw new Error(data?.error || "Failed to submit the message.");
+      }
+
       setStatus("success");
       setForm({ name: "", email: "", company: "", description: "" });
-    } catch {
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Something went wrong. Please try again.";
+      setErrorMessage(message);
       setStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -90,7 +96,7 @@ const ContactSection = () => {
                     className="flex items-center gap-3 rounded-lg border border-destructive/50 bg-destructive/10 px-4 py-3 text-sm text-destructive"
                   >
                     <AlertCircle size={18} className="shrink-0" />
-                    Something went wrong. Please try again or email us directly at support@pixelplace.cloud.
+                    {errorMessage} If this keeps happening, email support@pixelplace.cloud.
                   </motion.div>
                 )}
               </AnimatePresence>

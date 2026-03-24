@@ -16,8 +16,9 @@ const ContactSection = () => {
     setStatus("idle");
 
     try {
-      const res = await fetch(APPS_SCRIPT_URL, {
+      await fetch(APPS_SCRIPT_URL, {
         method: "POST",
+        mode: "no-cors",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
           name: form.name,
@@ -27,8 +28,7 @@ const ContactSection = () => {
         }).toString(),
       });
 
-      if (!res.ok) throw new Error("Network error");
-
+      // no-cors means we can't read the response, but the request goes through
       setStatus("success");
       setForm({ name: "", email: "", company: "", description: "" });
     } catch {

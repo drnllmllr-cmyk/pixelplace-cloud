@@ -24,20 +24,13 @@ serve(async (req) => {
       );
     }
 
-    // Forward to Google Apps Script
-    const formData = new URLSearchParams({
-      name,
-      email,
-      company: company || "",
-      description,
-    });
-
+    // Forward to Google Apps Script as JSON
     console.log(`Sending to Apps Script: name=${name}, email=${email}`);
 
     const scriptResponse = await fetch(APPS_SCRIPT_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: formData.toString(),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, company: company || "", description }),
       redirect: "follow",
     });
 

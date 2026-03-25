@@ -21,7 +21,7 @@ const WebDevelopmentSection = () => (
           Website <span className="text-gradient-primary">Development</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Custom websites and web applications built for performance, scalability, and security.
+          Custom websites and web applications built for performance and scalability. Schedule your consultation and get started deploying your applications.
         </p>
       </motion.div>
 

@@ -7,13 +7,13 @@ const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", description: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
-  const [errorMessage, setErrorMessage] = useState("Something went wrong. Please try again.");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus("idle");
-    setErrorMessage("Something went wrong. Please try again.");
+    setErrorMessage("");
 
     try {
       const { data, error } = await supabase.functions.invoke("notify-contact", {
@@ -29,12 +29,12 @@ const ContactSection = () => {
         throw new Error(error.message || "Failed to submit the message.");
       }
 
-      if (!data?.success) {
-        throw new Error(data?.error || "Failed to submit the message.");
+      if (data?.success === true) {
+        setStatus("success");
+        setForm({ name: "", email: "", company: "", description: "" });
+      } else {
+        throw new Error(data?.error || "Submission was not confirmed. Please try again.");
       }
-
-      setStatus("success");
-      setForm({ name: "", email: "", company: "", description: "" });
     } catch (error) {
       const message = error instanceof Error ? error.message : "Something went wrong. Please try again.";
       setErrorMessage(message);
@@ -96,7 +96,7 @@ const ContactSection = () => {
                     className="flex items-center gap-3 rounded-lg border border-destructive/50 bg-destructive/10 px-4 py-3 text-sm text-destructive"
                   >
                     <AlertCircle size={18} className="shrink-0" />
-                    {errorMessage} If this keeps happening, email support@pixelplace.cloud.
+                    <span>{errorMessage} If this keeps happening, email support@pixelplace.cloud.</span>
                   </motion.div>
                 )}
               </AnimatePresence>

@@ -1,5 +1,4 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -18,15 +17,14 @@ serve(async (req) => {
   try {
     const { name, email, company, description } = await req.json();
 
-    // Validate inputs
     if (!name || !email || !description) {
       return new Response(
-        JSON.stringify({ error: "Name, email, and description are required" }),
+        JSON.stringify({ success: false, error: "Name, email, and description are required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Forward submission to Google Apps Script (source of truth)
+    // Forward to Google Apps Script
     const formData = new URLSearchParams({
       name,
       email,
@@ -34,65 +32,67 @@ serve(async (req) => {
       description,
     });
 
+    console.log(`Sending to Apps Script: name=${name}, email=${email}`);
+
     const scriptResponse = await fetch(APPS_SCRIPT_URL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: formData.toString(),
+      redirect: "follow",
     });
 
     const scriptBody = await scriptResponse.text();
+    console.log(`Apps Script response status: ${scriptResponse.status}`);
+    console.log(`Apps Script response body: ${scriptBody.slice(0, 500)}`);
 
     if (!scriptResponse.ok) {
-      console.error("Apps Script error:", scriptResponse.status, scriptBody.slice(0, 400));
       return new Response(
-        JSON.stringify({
-          error:
-            "Contact form endpoint rejected the request. Please make sure your Google Apps Script is deployed as a Web App with public access.",
-        }),
+        JSON.stringify({ success: false, error: `Google Apps Script returned status ${scriptResponse.status}` }),
         { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    if (scriptBody.includes("Sorry, unable to open the file") || scriptBody.includes("Page Not Found")) {
-      console.error("Apps Script returned an access page instead of success response");
+    // Check for HTML error pages
+    if (scriptBody.includes("<!DOCTYPE html>") || scriptBody.includes("Sorry, unable to open the file")) {
       return new Response(
-        JSON.stringify({
-          error:
-            "Google Apps Script URL is not publicly accessible yet. Set Web App access to Anyone and deploy a new version.",
-        }),
+        JSON.stringify({ success: false, error: "Google Apps Script is not publicly accessible. Redeploy with access set to Anyone." }),
         { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Store in database
-    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const supabase = createClient(supabaseUrl, supabaseKey);
-
-    const { error: dbError } = await supabase
-      .from("contact_submissions")
-      .insert({ name, email, company: company || null, description });
-
-    if (dbError) {
-      console.error("Database error:", dbError);
+    // Try to parse as JSON
+    try {
+      const parsed = JSON.parse(scriptBody);
+      if (parsed.result === "success" || parsed.status === "success" || parsed.success === true) {
+        console.log(`Submission successful for ${name} (${email})`);
+        return new Response(
+          JSON.stringify({ success: true }),
+          { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      } else {
+        return new Response(
+          JSON.stringify({ success: false, error: parsed.error || "Apps Script did not confirm success" }),
+          { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    } catch {
+      // Non-JSON but 200 — treat as success (some Apps Scripts return plain text "Success")
+      if (scriptBody.toLowerCase().includes("success")) {
+        console.log(`Submission successful (plain text) for ${name} (${email})`);
+        return new Response(
+          JSON.stringify({ success: true }),
+          { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
       return new Response(
-        JSON.stringify({ error: "Failed to save submission" }),
-        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        JSON.stringify({ success: false, error: `Unexpected response from Apps Script: ${scriptBody.slice(0, 200)}` }),
+        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
-
-    console.log(`New contact submission from ${name} (${email})`);
-
-    return new Response(
-      JSON.stringify({ success: true, message: "Submission received" }),
-      { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
   } catch (error) {
     console.error("Error:", error);
     return new Response(
-      JSON.stringify({ error: "Internal server error" }),
+      JSON.stringify({ success: false, error: "Internal server error" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }

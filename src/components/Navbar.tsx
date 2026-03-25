@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Services", "About", "HD Wallpaper", "Website Development", "Cyber Security", "Contact"];
+const navItems = ["Services", "About", "HD Wallpaper", "Website Development", "Cyber Security"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src={logo} alt="PixelPlace.cloud" className="h-10" />
+          <img src={logo} alt="PixelPlace.cloud" className="h-14 md:h-16 w-auto" />
         </div>
 
         <div className="hidden md:flex items-center gap-8">

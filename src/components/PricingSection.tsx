@@ -1,56 +1,76 @@
 import { motion } from "framer-motion";
-import { Check, Zap, Shield, Rocket } from "lucide-react";
+import { Check, Image, Globe, Shield, Search } from "lucide-react";
 
 const tiers = [
   {
-    name: "Starter",
-    price: "$249.00",
-    period: "/project",
-    description: "Perfect for small businesses getting started",
-    icon: Zap,
+    name: "HD Wallpaper",
+    price: "$9.99",
+    period: "/per photo",
+    description: "AI Enhanced pictures perfect for Portraits, PC & Mobile Wallpaper",
+    icon: Image,
     glow: "glow-green",
     gradient: "from-accent to-accent/60",
     features: [
-      "Custom website or web app",
-      "Responsive design",
-      "Basic SEO setup",
-      "3 rounds of revisions",
-      "30-day post-launch support",
+      "Outdoor Nature",
+      "Historic",
+      "National parks",
+      "Travel",
+      "Florida",
     ],
   },
   {
-    name: "Pro",
-    price: "$699.00",
-    period: "/project",
-    description: "For growing teams that need robust solutions",
-    icon: Shield,
+    name: "Website Development",
+    prices: [
+      { label: "$349.00", sub: "/per website" },
+      { label: "$449.00", sub: "/per app" },
+    ],
+    description: "AI & Experience Developers working together building and deploying your websites & apps",
+    icon: Globe,
     glow: "glow-cyan",
     gradient: "from-primary to-primary/60",
     popular: true,
     features: [
-      "Everything in Starter",
-      "Cloud infrastructure setup",
-      "API integrations",
-      "Advanced analytics",
-      "CI/CD pipeline",
-      "90-day support & maintenance",
+      "Front End Website Development",
+      "Back End App Development",
+      "Google Sheets, App Scripts",
+      "Website Migrations",
+      "Domain & DNS Management",
+      "Cloudfare, Github",
     ],
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    period: "",
-    description: "Tailored solutions for large-scale operations",
-    icon: Rocket,
+    name: "Penetration Testing",
+    prices: [
+      { label: "$349.00", sub: "/per website" },
+      { label: "$449.00", sub: "/per app" },
+      { label: "$99.00", sub: "/per API" },
+    ],
+    description: "Manual Web & App Penetration Testing with detailed Reporting",
+    icon: Shield,
     glow: "glow-purple",
     gradient: "from-secondary to-secondary/60",
     features: [
-      "Everything in Pro",
-      "Dedicated engineering team",
-      "24/7 priority support",
-      "SOC 2 compliance",
-      "Custom SLAs",
-      "On-call incident response",
+      "Professional Senior Penetration Tester",
+      "Injection",
+      "JWT",
+      "OAuth",
+      "XSS",
+      "CSRF",
+      "many more",
+    ],
+  },
+  {
+    name: "Security Assessment",
+    price: "$99.00",
+    period: "/per vulnerability assessment",
+    description: "AI & Experience Developers working together building and deploying your websites & apps",
+    icon: Search,
+    glow: "glow-green",
+    gradient: "from-accent to-secondary/60",
+    features: [
+      "Port & Network Scanning",
+      "OSINT",
+      "Vulnerability Assessment",
     ],
   },
 ];
@@ -75,7 +95,7 @@ const PricingSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}
@@ -100,9 +120,20 @@ const PricingSection = () => {
               <h3 className="text-xl font-display font-bold text-foreground mb-2">{tier.name}</h3>
               <p className="text-sm text-muted-foreground mb-6">{tier.description}</p>
 
-              <div className="mb-8">
-                <span className="text-4xl font-display font-bold text-foreground">{tier.price}</span>
-                <span className="text-muted-foreground text-sm">{tier.period}</span>
+              <div className="mb-8 space-y-1">
+                {"prices" in tier && tier.prices ? (
+                  tier.prices.map((p, idx) => (
+                    <div key={idx}>
+                      <span className="text-2xl font-display font-bold text-foreground">{p.label}</span>
+                      <span className="text-muted-foreground text-sm">{p.sub}</span>
+                    </div>
+                  ))
+                ) : (
+                  <div>
+                    <span className="text-4xl font-display font-bold text-foreground">{tier.price}</span>
+                    <span className="text-muted-foreground text-sm">{tier.period}</span>
+                  </div>
+                )}
               </div>
 
               <ul className="space-y-3 mb-8">
@@ -115,13 +146,14 @@ const PricingSection = () => {
               </ul>
 
               <button
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 className={`w-full py-3 rounded-xl font-display font-semibold text-sm transition-all ${
                   tier.popular
                     ? "btn-glow text-primary-foreground"
                     : "border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
                 }`}
               >
-                {tier.price === "Custom" ? "Contact Us" : "Get Started"}
+                Get Started
               </button>
             </motion.div>
           ))}

@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8 mb-10">
         <div className="md:col-span-2">
-          <img src={logo} alt="PixelPlace.cloud" className="h-10 mb-4" />
+          <img src={logo} alt="PixelPlace.cloud" className="h-14 md:h-16 w-auto mb-4" />
           <p className="text-sm text-muted-foreground max-w-sm">
             Building the future of cloud infrastructure, cybersecurity, and AI-powered solutions.
           </p>
@@ -13,10 +13,10 @@ const Footer = () => (
         <div>
           <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Services</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="hover:text-primary transition-colors cursor-pointer">Web Development</li>
-            <li className="hover:text-primary transition-colors cursor-pointer">Cloud Infrastructure</li>
-            <li className="hover:text-primary transition-colors cursor-pointer">Cybersecurity</li>
-            <li className="hover:text-primary transition-colors cursor-pointer">AI Solutions</li>
+            <li className="hover:text-primary transition-colors cursor-pointer">Website Development</li>
+            <li className="hover:text-primary transition-colors cursor-pointer">HD Wallpaper</li>
+            <li className="hover:text-primary transition-colors cursor-pointer">Cyber Security</li>
+            <li className="hover:text-primary transition-colors cursor-pointer">Security Assessments</li>
           </ul>
         </div>
         <div>

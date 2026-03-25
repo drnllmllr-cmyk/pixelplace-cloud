@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import cyberPentest from "@/assets/cyber-pentest.jpg";
+import cyberAssessment from "@/assets/cyber-assessment.jpg";
+import cyberReporting from "@/assets/cyber-reporting.jpg";
 
 const projects = [
-  { title: "Cloud Dashboard", tag: "Infrastructure", gradient: "from-neon-cyan/20 to-neon-blue/10" },
-  { title: "Security Operations Center", tag: "Cybersecurity", gradient: "from-neon-green/20 to-neon-cyan/10" },
-  { title: "AI Analytics Platform", tag: "AI Solutions", gradient: "from-neon-purple/20 to-neon-magenta/10" },
+  { title: "Penetration Testing", tag: "Offensive Security", image: cyberPentest },
+  { title: "Security Assessments", tag: "Vulnerability Analysis", image: cyberAssessment },
+  { title: "Detailed Reporting", tag: "Documentation", image: cyberReporting },
 ];
 
 const PortfolioSection = () => (
@@ -17,9 +20,11 @@ const PortfolioSection = () => (
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-          Our <span className="text-gradient-primary">Solutions</span>
+          Cyber <span className="text-gradient-primary">Security</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">Enterprise platforms built for scale, security, and intelligence.</p>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Professional Offensive Cyber Security services; lead by Senior Penetration Tester with 20 years of professional experience in technology.
+        </p>
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-6">
@@ -32,20 +37,15 @@ const PortfolioSection = () => (
             transition={{ delay: i * 0.15 }}
             className="group glass card-glow rounded-xl overflow-hidden"
           >
-            <div className={`h-48 bg-gradient-to-br ${p.gradient} flex items-center justify-center relative`}>
-              {/* Mockup lines */}
-              <div className="absolute inset-4 border border-foreground/5 rounded-lg">
-                <div className="h-3 bg-foreground/5 rounded-t-lg" />
-                <div className="p-3 space-y-2">
-                  <div className="h-2 bg-foreground/5 rounded w-3/4" />
-                  <div className="h-2 bg-foreground/5 rounded w-1/2" />
-                  <div className="grid grid-cols-3 gap-2 mt-4">
-                    <div className="h-12 bg-foreground/5 rounded" />
-                    <div className="h-12 bg-foreground/5 rounded" />
-                    <div className="h-12 bg-foreground/5 rounded" />
-                  </div>
-                </div>
-              </div>
+            <div className="h-48 overflow-hidden">
+              <img
+                src={p.image}
+                alt={p.title}
+                loading="lazy"
+                width={640}
+                height={512}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
             <div className="p-5">
               <span className="text-xs font-display text-primary mb-2 block">{p.tag}</span>

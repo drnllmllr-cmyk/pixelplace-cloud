@@ -63,7 +63,7 @@ const tiers = [
     name: "Security Assessment",
     price: "$99.00",
     period: "/per vulnerability assessment",
-    description: "AI & Experience Developers working together building and deploying your websites & apps",
+    description: "Detailed vulnerability scanning and security assessments to strengthen your business",
     icon: Search,
     glow: "glow-green",
     gradient: "from-accent to-secondary/60",

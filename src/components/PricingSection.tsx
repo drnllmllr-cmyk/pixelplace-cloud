@@ -6,7 +6,7 @@ const tiers = [
     name: "HD Wallpaper",
     price: "$9.99",
     period: "/per photo",
-    description: "AI Enhanced pictures perfect for Portraits, PC & Mobile Wallpaper",
+    description: "Beautiful, original images captured by a professional photographer and elevated using cutting-edge AI enhancements—delivering striking visuals perfect for portraits and digital wallpapers",
     icon: Image,
     glow: "glow-green",
     gradient: "from-accent to-accent/60",

@@ -52,10 +52,37 @@ const TechStackSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-sm md:text-base text-muted-foreground font-display italic"
+        className="text-lg md:text-2xl font-display font-semibold text-foreground tracking-wide mb-6"
       >
-        Schedule to view and purchase from full portfolio
+        Download stunning 4K wallpapers –{" "}
+        <span className="text-gradient-primary">starting at $9.99</span>
       </motion.p>
+
+      <motion.a
+        href="https://drive.google.com/drive/folders/1dOGxJbzkp192q-bjH6eY49ouy8Ifm-Iv?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="inline-block px-8 py-3 rounded-xl bg-primary text-primary-foreground font-display font-bold text-sm tracking-wider hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:scale-105 mb-8"
+      >
+        View Full Collection
+      </motion.a>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="max-w-xl mx-auto glass rounded-2xl p-6 border border-primary/20"
+      >
+        <h3 className="text-lg font-display font-bold text-primary mb-3">Ready to Purchase?</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Simply fill out the contact form and let us know the exact name of the image you'd like.
+          We'll email you with easy payment instructions, and as soon as your purchase is confirmed,
+          you'll receive access right away.
+        </p>
+      </motion.div>
     </div>
   </section>
 );

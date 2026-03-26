@@ -44,8 +44,8 @@ const testimonials = [
 
 const trustBadges = [
   { label: "99.99% Uptime", value: "Guaranteed" },
-  { label: "50+", value: "Projects Delivered" },
-  { label: "SOC 2", value: "Compliant" },
+  { label: "200+", value: "Projects Delivered" },
+  { label: "SOC 2", value: "Over 20 Years of Experience" },
   { label: "24/7", value: "Support" },
 ];
 

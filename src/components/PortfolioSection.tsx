@@ -62,23 +62,16 @@ const projects = [
 ];
 
 const FlipCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.15 }}
-      className="group perspective-1000 h-[340px] cursor-pointer"
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      className="flip-card-container h-[340px] cursor-pointer"
     >
-      <div
-        className={`relative w-full h-full transition-transform duration-700 preserve-3d ${
-          isFlipped ? "rotate-y-180" : ""
-        }`}
-      >
+      <div className="flip-card-inner">
+
         {/* Front */}
         <div className="absolute inset-0 backface-hidden glass card-glow rounded-xl overflow-hidden">
           <div className="h-48 overflow-hidden">

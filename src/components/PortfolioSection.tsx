@@ -91,7 +91,7 @@ const FlipCard = ({ project, index }: { project: typeof projects[0]; index: numb
         </div>
 
         {/* Back */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180 glass card-glow rounded-xl overflow-hidden p-6 flex flex-col justify-center">
+        <div className="absolute inset-0 backface-hidden rotate-y-180 glass rounded-xl overflow-hidden p-6 flex flex-col justify-center border border-primary/30 shadow-[var(--glow-cyan)]">
           <h3 className="font-display text-base font-bold text-primary mb-3">
             {project.backContent.heading}
           </h3>

@@ -73,7 +73,7 @@ const FlipCard = ({ project, index }: { project: typeof projects[0]; index: numb
       <div className="flip-card-inner">
 
         {/* Front */}
-        <div className="absolute inset-0 backface-hidden glass card-glow rounded-xl overflow-hidden">
+        <div className="absolute inset-0 backface-hidden glass rounded-xl overflow-hidden border border-border/50">
           <div className="h-48 overflow-hidden">
             <img
               src={project.image}

@@ -30,7 +30,7 @@ serve(async (req) => {
     const scriptResponse = await fetch(APPS_SCRIPT_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, company: company || "", description, message: description }),
+      body: JSON.stringify({ name, email, company: company || "", description, message: description, projectDescription: description, project_description: description }),
       redirect: "follow",
     });
 

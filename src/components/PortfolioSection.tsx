@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+
 import cyberPentest from "@/assets/cyber-pentest.jpg";
 import cyberAssessment from "@/assets/cyber-assessment.jpg";
 import cyberReporting from "@/assets/cyber-reporting.jpg";
@@ -62,25 +62,18 @@ const projects = [
 ];
 
 const FlipCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.15 }}
-      className="group perspective-1000 h-[340px] cursor-pointer"
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      className="flip-card-container h-[340px] cursor-pointer"
     >
-      <div
-        className={`relative w-full h-full transition-transform duration-700 preserve-3d ${
-          isFlipped ? "rotate-y-180" : ""
-        }`}
-      >
+      <div className="flip-card-inner">
+
         {/* Front */}
-        <div className="absolute inset-0 backface-hidden glass card-glow rounded-xl overflow-hidden">
+        <div className="absolute inset-0 backface-hidden glass rounded-xl overflow-hidden border border-border/50">
           <div className="h-48 overflow-hidden">
             <img
               src={project.image}
@@ -98,7 +91,7 @@ const FlipCard = ({ project, index }: { project: typeof projects[0]; index: numb
         </div>
 
         {/* Back */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180 glass card-glow rounded-xl overflow-hidden p-6 flex flex-col justify-center">
+        <div className="absolute inset-0 backface-hidden rotate-y-180 glass rounded-xl overflow-hidden p-6 flex flex-col justify-center border border-primary/30 shadow-[var(--glow-cyan)]">
           <h3 className="font-display text-base font-bold text-primary mb-3">
             {project.backContent.heading}
           </h3>

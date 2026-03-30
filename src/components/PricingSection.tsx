@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Image, Globe, Shield, Search, Network, Wifi, Server } from "lucide-react";
+import { Check, Image, Globe, Shield, Search, Network, Wifi, Server, Monitor, MessageSquare } from "lucide-react";
 
 const tiers = [
   {

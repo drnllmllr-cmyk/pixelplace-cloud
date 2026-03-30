@@ -132,6 +132,22 @@ const tiers = [
       "Infrastructure Hardening",
     ],
   },
+  {
+    name: "Consultation",
+    price: "$100.00",
+    period: "/per session",
+    description: "Identify issues fast and get clear, actionable solutions for networks, security, and systems. No guesswork — just expert answers.",
+    icon: MessageSquare,
+    glow: "glow-green",
+    gradient: "from-accent to-primary/60",
+    features: [
+      "Network Troubleshooting",
+      "Security Strategy Review",
+      "System Architecture Guidance",
+      "Risk Assessment & Prioritization",
+      "Expert Recommendations",
+    ],
+  },
 ];
 
 const PricingSection = () => {

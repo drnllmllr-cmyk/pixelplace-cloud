@@ -32,7 +32,7 @@ const ServicesSection = () => (
         <p className="text-muted-foreground max-w-xl mx-auto">End-to-end digital solutions engineered for the modern enterprise.</p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {services.map((s, i) => (
           <motion.div
             key={s.title}

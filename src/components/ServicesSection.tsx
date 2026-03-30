@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Globe, Cloud, ShieldCheck, Bot } from "lucide-react";
+import { Globe, Cloud, ShieldCheck, Bot, Network } from "lucide-react";
 
 const services = [
   { icon: Globe, title: "Web Development", desc: "Modern, responsive web applications built with cutting-edge frameworks and optimized for performance.", color: "neon-cyan" },
   { icon: Cloud, title: "HD Wallpaper", desc: "HD AI Enhanced beautiful pictures of South Florida, beaches, historic locations, national parks and more.", color: "neon-blue" },
   { icon: ShieldCheck, title: "Security Assessments", desc: "Security scanning, vulnerability scanning, open ports, reporting, Red Teaming.", color: "neon-green" },
   { icon: Bot, title: "Penetration Testing", desc: "Remote Penetration Testing, Web Applications, Mobile Apps, APIs, Cloud Infrastructure, Networking Penetration Testing.", color: "neon-purple" },
+  { icon: Network, title: "Network Assessments", desc: "Comprehensive network infrastructure analysis, topology mapping, firewall rule review, segmentation testing, and wireless security auditing.", color: "neon-cyan" },
 ];
 
 const colorMap: Record<string, string> = {
@@ -31,7 +32,7 @@ const ServicesSection = () => (
         <p className="text-muted-foreground max-w-xl mx-auto">End-to-end digital solutions engineered for the modern enterprise.</p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {services.map((s, i) => (
           <motion.div
             key={s.title}

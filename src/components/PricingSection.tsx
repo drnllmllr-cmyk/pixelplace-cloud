@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Image, Globe, Shield, Search } from "lucide-react";
+import { Check, Image, Globe, Shield, Search, Network, Wifi, Server } from "lucide-react";
 
 const tiers = [
   {
@@ -39,24 +39,54 @@ const tiers = [
     ],
   },
   {
-    name: "Penetration Testing",
-    prices: [
-      { label: "$349.00", sub: "/per website" },
-      { label: "$449.00", sub: "/per app" },
-      { label: "$99.00", sub: "/per API" },
-    ],
-    description: "Manual Web & App Penetration Testing with detailed Reporting",
+    name: "Website Pen Test",
+    price: "$349.00",
+    period: "/per website",
+    description: "Manual penetration testing for websites with comprehensive vulnerability assessment and detailed reporting",
     icon: Shield,
     glow: "glow-purple",
     gradient: "from-secondary to-secondary/60",
     features: [
-      "Professional Senior Penetration Tester",
-      "Injection",
-      "JWT",
-      "OAuth",
-      "XSS",
-      "CSRF",
-      "many more",
+      "OWASP Top 10 Testing",
+      "Injection & XSS Testing",
+      "CSRF & SSRF Analysis",
+      "Authentication Testing",
+      "Session Management Review",
+      "Detailed Remediation Report",
+    ],
+  },
+  {
+    name: "App Pen Test",
+    price: "$449.00",
+    period: "/per app",
+    description: "In-depth application penetration testing for mobile and web apps with manual exploitation techniques",
+    icon: Server,
+    glow: "glow-purple",
+    gradient: "from-secondary to-primary/60",
+    features: [
+      "Mobile & Web App Testing",
+      "JWT & OAuth Analysis",
+      "Business Logic Testing",
+      "API Integration Testing",
+      "Privilege Escalation Checks",
+      "Comprehensive Reporting",
+    ],
+  },
+  {
+    name: "API Pen Test",
+    price: "$99.00",
+    period: "/per API",
+    description: "Targeted API security testing covering authentication, authorization, and data exposure vulnerabilities",
+    icon: Wifi,
+    glow: "glow-purple",
+    gradient: "from-primary to-secondary/60",
+    features: [
+      "REST & GraphQL Testing",
+      "Authentication Bypass",
+      "Rate Limiting Analysis",
+      "Data Exposure Testing",
+      "Injection Attacks",
+      "Security Report & Fixes",
     ],
   },
   {
@@ -71,6 +101,22 @@ const tiers = [
       "Port & Network Scanning",
       "OSINT",
       "Vulnerability Assessment",
+    ],
+  },
+  {
+    name: "Network Assessment",
+    price: "$199.00",
+    period: "/per assessment",
+    description: "Comprehensive network infrastructure analysis, topology review, and wireless security auditing",
+    icon: Network,
+    glow: "glow-cyan",
+    gradient: "from-primary to-accent/60",
+    features: [
+      "Network Topology Mapping",
+      "Firewall Rule Review",
+      "Segmentation Testing",
+      "Wireless Security Audit",
+      "Infrastructure Hardening",
     ],
   },
 ];
@@ -95,14 +141,14 @@ const PricingSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
+              transition={{ delay: i * 0.1 }}
               className={`relative glass rounded-2xl p-8 border border-border/50 card-glow group ${
                 tier.popular ? "md:-mt-4 md:mb-[-1rem]" : ""
               }`}
@@ -153,7 +199,7 @@ const PricingSection = () => {
                     : "border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
                 }`}
               >
-                Get Started
+                Pay Now
               </button>
             </motion.div>
           ))}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Image, Globe, Shield, Search, Network, Wifi, Server } from "lucide-react";
+import { Check, Image, Globe, Shield, Search, Network, Wifi, Server, Monitor, MessageSquare } from "lucide-react";
 
 const tiers = [
   {
@@ -20,22 +20,35 @@ const tiers = [
   },
   {
     name: "Website Development",
-    prices: [
-      { label: "$349.00", sub: "/per website" },
-      { label: "$449.00", sub: "/per app" },
-    ],
-    description: "AI & Experience Developers working together building and deploying your websites & apps",
+    price: "$349.00",
+    period: "/per website",
+    description: "AI & Experience Developers working together building and deploying your websites",
     icon: Globe,
     glow: "glow-cyan",
     gradient: "from-primary to-primary/60",
     popular: true,
     features: [
       "Front End Website Development",
-      "Back End App Development",
       "Google Sheets, App Scripts",
       "Website Migrations",
       "Domain & DNS Management",
-      "Cloudfare, Github",
+      "Cloudflare, GitHub",
+    ],
+  },
+  {
+    name: "App Development",
+    price: "$449.00",
+    period: "/per app",
+    description: "Custom application development with modern frameworks, backend integration, and seamless deployment",
+    icon: Monitor,
+    glow: "glow-cyan",
+    gradient: "from-primary to-accent/60",
+    features: [
+      "Back End App Development",
+      "API Integration & Development",
+      "Database Design & Management",
+      "Cloud Deployment & Hosting",
+      "Ongoing Maintenance & Support",
     ],
   },
   {
@@ -119,6 +132,22 @@ const tiers = [
       "Infrastructure Hardening",
     ],
   },
+  {
+    name: "Consultation",
+    price: "$100.00",
+    period: "/per session",
+    description: "Identify issues fast and get clear, actionable solutions for networks, security, and systems. No guesswork — just expert answers.",
+    icon: MessageSquare,
+    glow: "glow-green",
+    gradient: "from-accent to-primary/60",
+    features: [
+      "Network Troubleshooting",
+      "Security Strategy Review",
+      "System Architecture Guidance",
+      "Risk Assessment & Prioritization",
+      "Expert Recommendations",
+    ],
+  },
 ];
 
 const PricingSection = () => {
@@ -167,19 +196,10 @@ const PricingSection = () => {
               <p className="text-sm text-muted-foreground mb-6">{tier.description}</p>
 
               <div className="mb-8 space-y-1">
-                {"prices" in tier && tier.prices ? (
-                  tier.prices.map((p, idx) => (
-                    <div key={idx}>
-                      <span className="text-2xl font-display font-bold text-foreground">{p.label}</span>
-                      <span className="text-muted-foreground text-sm">{p.sub}</span>
-                    </div>
-                  ))
-                ) : (
-                  <div>
-                    <span className="text-4xl font-display font-bold text-foreground">{tier.price}</span>
-                    <span className="text-muted-foreground text-sm">{tier.period}</span>
-                  </div>
-                )}
+                <div>
+                  <span className="text-4xl font-display font-bold text-foreground">{tier.price}</span>
+                  <span className="text-muted-foreground text-sm">{tier.period}</span>
+                </div>
               </div>
 
               <ul className="space-y-3 mb-8">

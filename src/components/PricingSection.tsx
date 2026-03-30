@@ -196,19 +196,10 @@ const PricingSection = () => {
               <p className="text-sm text-muted-foreground mb-6">{tier.description}</p>
 
               <div className="mb-8 space-y-1">
-                {"prices" in tier && tier.prices ? (
-                  tier.prices.map((p, idx) => (
-                    <div key={idx}>
-                      <span className="text-2xl font-display font-bold text-foreground">{p.label}</span>
-                      <span className="text-muted-foreground text-sm">{p.sub}</span>
-                    </div>
-                  ))
-                ) : (
-                  <div>
-                    <span className="text-4xl font-display font-bold text-foreground">{tier.price}</span>
-                    <span className="text-muted-foreground text-sm">{tier.period}</span>
-                  </div>
-                )}
+                <div>
+                  <span className="text-4xl font-display font-bold text-foreground">{tier.price}</span>
+                  <span className="text-muted-foreground text-sm">{tier.period}</span>
+                </div>
               </div>
 
               <ul className="space-y-3 mb-8">

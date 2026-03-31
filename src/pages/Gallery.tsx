@@ -117,7 +117,7 @@ const Gallery = () => {
         <p className="text-muted-foreground text-sm mb-4">
           Don't see what you're looking for?{" "}
           <Link to="/#contact" className="text-primary hover:underline font-semibold">
-            Contact us
+            Get In Touch
           </Link>{" "}
           for custom requests.
         </p>

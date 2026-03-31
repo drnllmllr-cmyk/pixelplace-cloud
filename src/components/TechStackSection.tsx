@@ -59,9 +59,7 @@ const TechStackSection = () => (
       </motion.p>
 
       <motion.a
-        href="https://drive.google.com/drive/folders/1dOGxJbzkp192q-bjH6eY49ouy8Ifm-Iv?usp=drive_link"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/gallery"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -74,13 +72,17 @@ const TechStackSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="max-w-xl mx-auto glass rounded-2xl p-6 border border-primary/20"
+        className="max-w-2xl mx-auto glass rounded-2xl p-8 border border-primary/20"
       >
-        <h3 className="text-lg font-display font-bold text-primary mb-3">Ready to Purchase?</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          Simply fill out the contact form and let us know the exact name of the image you'd like.
-          We'll email you with easy payment instructions, and as soon as your purchase is confirmed,
-          you'll receive access right away.
+        <h3 className="text-xl font-display font-bold text-primary mb-4">Ready to Download?</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+          Browse our collection of stunning 4K wallpapers, perfect for your phone, desktop, or workspace.
+        </p>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          Simply select your favorite image and click "<span className="text-primary font-semibold">Buy Now</span>" for instant access. Once your purchase is complete, your high-quality download will be available immediately.
+        </p>
+        <p className="text-sm font-display font-semibold text-foreground tracking-wide">
+          Clean. Sharp. Professional. <span className="text-gradient-primary">Elevate your screen today.</span>
         </p>
       </motion.div>
     </div>

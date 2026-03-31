@@ -113,15 +113,20 @@ const Gallery = () => {
       </section>
 
       {/* Footer CTA */}
-      <section className="border-t border-border/30 py-12 text-center">
-        <p className="text-muted-foreground text-sm mb-4">
-          Don't see what you're looking for?{" "}
-          <Link to="/#contact" className="text-primary hover:underline font-semibold">
-            Get In Touch
-          </Link>{" "}
-          for custom requests.
+      <section className="border-t border-border/30 py-16 text-center">
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+          Get In <span className="text-gradient-primary">Touch</span>
+        </h3>
+        <p className="text-muted-foreground text-base mb-6">
+          Ready to build something incredible? Let's talk.
         </p>
-        <p className="text-xs text-muted-foreground/60">
+        <Link
+          to="/#contact"
+          className="inline-block px-8 py-3 rounded-xl bg-primary text-primary-foreground font-display font-bold text-sm tracking-wider hover:shadow-[0_0_25px_hsl(var(--primary)/0.4)] transition-all duration-300 hover:scale-105"
+        >
+          Contact Us
+        </Link>
+        <p className="text-xs text-muted-foreground/60 mt-10">
           © {new Date().getFullYear()} PixelPlace.cloud — All rights reserved.
         </p>
       </section>

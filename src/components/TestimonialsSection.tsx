@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
 
 const partnerLogos = [
   { name: "NexaFlow", accent: "text-primary" },
@@ -15,28 +14,28 @@ const testimonials = [
   {
     name: "Sarah Chen",
     role: "CTO, NexaFlow",
-    quote: "PixelPlace transformed our cloud infrastructure. Migration was seamless and we saw a 40% improvement in performance overnight.",
+    quote: "PixelPlace built us a stunning website that loads lightning fast. Their development expertise is unmatched.",
     rating: 5,
     avatar: "SC",
   },
   {
     name: "Marcus Rodriguez",
     role: "Founder, Vaultrix",
-    quote: "Their cybersecurity audit uncovered vulnerabilities we never knew existed. We now sleep easy knowing our data is protected.",
+    quote: "The HD wallpapers we purchased are absolutely breathtaking. Professional quality that elevated our entire brand.",
     rating: 5,
     avatar: "MR",
   },
   {
     name: "Elena Petrova",
     role: "VP Engineering, DataPulse",
-    quote: "The AI automation tools they built cut our manual processes by 60%. Absolutely game-changing for our team's productivity.",
+    quote: "From concept to deployment in weeks, not months. PixelPlace delivered our web app with incredible precision.",
     rating: 5,
     avatar: "EP",
   },
   {
     name: "James Okafor",
     role: "CEO, CloudBridge",
-    quote: "From concept to deployment in weeks, not months. PixelPlace's team delivers enterprise-grade solutions with startup speed.",
+    quote: "Their team migrated our entire website seamlessly. Zero downtime, better performance. Highly recommended.",
     rating: 5,
     avatar: "JO",
   },
@@ -52,7 +51,6 @@ const trustBadges = [
 const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="relative py-24 overflow-hidden">
-      {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4">
@@ -70,7 +68,6 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        {/* Trust Badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +89,6 @@ const TestimonialsSection = () => {
           ))}
         </motion.div>
 
-        {/* Testimonial Cards */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {testimonials.map((t, i) => (
             <motion.div
@@ -128,7 +124,6 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Logo Carousel */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

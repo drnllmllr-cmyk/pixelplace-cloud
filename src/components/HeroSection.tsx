@@ -28,7 +28,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body"
         >
-          Web Infrastructure, Cloud Platforms, Cybersecurity & AI Solutions
+          HD Wallpapers, Website Development & App Development
         </motion.p>
 
         <motion.div

@@ -7,16 +7,15 @@ const Footer = () => (
         <div className="md:col-span-2">
           <img src={logo} alt="PixelPlace.cloud" className="h-14 md:h-16 w-auto mb-4" />
           <p className="text-sm text-muted-foreground max-w-sm">
-            Building the future of cloud infrastructure, cybersecurity, and AI-powered solutions.
+            Building beautiful websites, powerful apps, and stunning AI-enhanced HD wallpapers.
           </p>
         </div>
         <div>
           <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Services</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li className="hover:text-primary transition-colors cursor-pointer">Website Development</li>
+            <li className="hover:text-primary transition-colors cursor-pointer">App Development</li>
             <li className="hover:text-primary transition-colors cursor-pointer">HD Wallpaper</li>
-            <li className="hover:text-primary transition-colors cursor-pointer">Cyber Security</li>
-            <li className="hover:text-primary transition-colors cursor-pointer">Security Assessments</li>
           </ul>
         </div>
         <div>

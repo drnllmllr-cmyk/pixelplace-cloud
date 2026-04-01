@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Scaling, Brain, LayoutDashboard } from "lucide-react";
+import { Scaling, LayoutDashboard, Camera, Rocket } from "lucide-react";
 
 const reasons = [
-  { icon: ShieldCheck, title: "Secure Infrastructure", desc: "Enterprise-grade encryption and compliance at every layer." },
-  { icon: Scaling, title: "Scalable Cloud Platforms", desc: "Auto-scaling architecture that grows with your business." },
-  { icon: Brain, title: "AI-Powered Solutions", desc: "Machine learning integrations that drive intelligent decisions." },
-  { icon: LayoutDashboard, title: "Modern Web Architecture", desc: "Fast, accessible, SEO-optimized web applications." },
+  { icon: Scaling, title: "Scalable Platforms", desc: "Websites and apps that grow with your business using modern cloud infrastructure." },
+  { icon: LayoutDashboard, title: "Modern Web Architecture", desc: "Fast, accessible, SEO-optimized web applications using GitHub, Cloudflare, WordPress, and more." },
+  { icon: Camera, title: "AI-Enhanced Wallpapers", desc: "Professional photography elevated with cutting-edge AI for stunning 4K digital art." },
+  { icon: Rocket, title: "Rapid Deployment", desc: "From concept to launch in days — not months. We move fast without compromising quality." },
 ];
 
 const WhyChooseSection = () => (

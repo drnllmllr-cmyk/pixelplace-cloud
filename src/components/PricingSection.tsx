@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Image, Globe, Shield, Search, Network, Wifi, Server, Monitor, MessageSquare } from "lucide-react";
+import { Check, Image, Globe, Monitor } from "lucide-react";
 
 const tiers = [
   {
@@ -13,7 +13,7 @@ const tiers = [
     features: [
       "Outdoor Nature",
       "Historic",
-      "National parks",
+      "National Parks",
       "Travel",
       "Florida",
     ],
@@ -22,7 +22,7 @@ const tiers = [
     name: "Website Development",
     price: "$349.00",
     period: "/per website",
-    description: "AI & Experience Developers working together building and deploying your websites",
+    description: "AI & Experience Developers working together building and deploying your websites using GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more",
     icon: Globe,
     glow: "glow-cyan",
     gradient: "from-primary to-primary/60",
@@ -51,103 +51,6 @@ const tiers = [
       "Ongoing Maintenance & Support",
     ],
   },
-  {
-    name: "Website Pen Test",
-    price: "$349.00",
-    period: "/per website",
-    description: "Manual penetration testing for websites with comprehensive vulnerability assessment and detailed reporting",
-    icon: Shield,
-    glow: "glow-purple",
-    gradient: "from-secondary to-secondary/60",
-    features: [
-      "OWASP Top 10 Testing",
-      "Injection & XSS Testing",
-      "CSRF & SSRF Analysis",
-      "Authentication Testing",
-      "Session Management Review",
-      "Detailed Remediation Report",
-    ],
-  },
-  {
-    name: "App Pen Test",
-    price: "$449.00",
-    period: "/per app",
-    description: "In-depth application penetration testing for mobile and web apps with manual exploitation techniques",
-    icon: Server,
-    glow: "glow-purple",
-    gradient: "from-secondary to-primary/60",
-    features: [
-      "Mobile & Web App Testing",
-      "JWT & OAuth Analysis",
-      "Business Logic Testing",
-      "API Integration Testing",
-      "Privilege Escalation Checks",
-      "Comprehensive Reporting",
-    ],
-  },
-  {
-    name: "API Pen Test",
-    price: "$99.00",
-    period: "/per API",
-    description: "Targeted API security testing covering authentication, authorization, and data exposure vulnerabilities",
-    icon: Wifi,
-    glow: "glow-purple",
-    gradient: "from-primary to-secondary/60",
-    features: [
-      "REST & GraphQL Testing",
-      "Authentication Bypass",
-      "Rate Limiting Analysis",
-      "Data Exposure Testing",
-      "Injection Attacks",
-      "Security Report & Fixes",
-    ],
-  },
-  {
-    name: "Security Assessment",
-    price: "$99.00",
-    period: "/per vulnerability assessment",
-    description: "Detailed vulnerability scanning and security assessments to strengthen your business",
-    icon: Search,
-    glow: "glow-green",
-    gradient: "from-accent to-secondary/60",
-    features: [
-      "Port & Network Scanning",
-      "OSINT",
-      "Vulnerability Assessment",
-    ],
-  },
-  {
-    name: "Network Assessment",
-    price: "$199.00",
-    period: "/per assessment",
-    description: "Comprehensive network infrastructure analysis, topology review, and wireless security auditing",
-    icon: Network,
-    glow: "glow-cyan",
-    gradient: "from-primary to-accent/60",
-    features: [
-      "Network Topology Mapping",
-      "Firewall Rule Review",
-      "Segmentation Testing",
-      "Wireless Security Audit",
-      "Infrastructure Hardening",
-    ],
-  },
-  {
-    name: "Consultation",
-    price: "$100.00",
-    period: "/per session",
-    description: "Identify issues fast and get clear, actionable solutions for networks, security, and systems. No guesswork — just expert answers.",
-    icon: MessageSquare,
-    glow: "glow-green",
-    gradient: "from-accent to-primary/60",
-    features: [
-      "Network Troubleshooting",
-      "Security Strategy Review",
-      "System Architecture Guidance",
-      "Risk Assessment & Prioritization",
-      "Expert Recommendations",
-    ],
-  },
 ];
 
 const PricingSection = () => {
@@ -170,7 +73,7 @@ const PricingSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}

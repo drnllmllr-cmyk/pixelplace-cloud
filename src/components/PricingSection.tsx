@@ -6,7 +6,7 @@ const tiers = [
     name: "Website Development",
     price: "$349.00",
     period: "/per website",
-    description: "AI & Experience Developers working together building and deploying your websites using GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more",
+    description: "Elite AI & Experienced Developers delivering secure, high-performance websites and applications — built and deployed using modern platforms like GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more.",
     icon: Globe,
     glow: "glow-cyan",
     gradient: "from-primary to-primary/60",

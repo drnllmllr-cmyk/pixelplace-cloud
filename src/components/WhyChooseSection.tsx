@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { Scaling, LayoutDashboard, Camera, Rocket } from "lucide-react";
+import { Scaling, LayoutDashboard, Rocket, Shield } from "lucide-react";
 
 const reasons = [
   { icon: Scaling, title: "Scalable Platforms", desc: "Websites and apps that grow with your business using modern cloud infrastructure." },
   { icon: LayoutDashboard, title: "Modern Web Architecture", desc: "Fast, accessible, SEO-optimized web applications using GitHub, Cloudflare, WordPress, and more." },
-  { icon: Camera, title: "AI-Enhanced Wallpapers", desc: "Professional photography elevated with cutting-edge AI for stunning 4K digital art." },
+  { icon: Shield, title: "Reliable & Secure", desc: "Best practices in security, performance, and uptime so your site is always online." },
   { icon: Rocket, title: "Rapid Deployment", desc: "From concept to launch in days — not months. We move fast without compromising quality." },
 ];
 

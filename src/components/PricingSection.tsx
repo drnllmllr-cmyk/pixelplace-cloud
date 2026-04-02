@@ -1,23 +1,7 @@
 import { motion } from "framer-motion";
-import { Check, Image, Globe, Monitor } from "lucide-react";
+import { Check, Globe, Monitor } from "lucide-react";
 
 const tiers = [
-  {
-    name: "HD Wallpaper",
-    price: "$9.99",
-    period: "/per photo",
-    description: "Beautiful, original images captured by a professional photographer and elevated using cutting-edge AI enhancements—delivering striking visuals perfect for portraits and digital wallpapers",
-    icon: Image,
-    glow: "glow-green",
-    gradient: "from-accent to-accent/60",
-    features: [
-      "Outdoor Nature",
-      "Historic",
-      "National Parks",
-      "Travel",
-      "Florida",
-    ],
-  },
   {
     name: "Website Development",
     price: "$349.00",
@@ -73,7 +57,7 @@ const PricingSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}

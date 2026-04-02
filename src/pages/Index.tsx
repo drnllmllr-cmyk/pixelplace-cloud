@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
-import TechStackSection from "@/components/TechStackSection";
 import WebDevelopmentSection from "@/components/WebDevelopmentSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -26,11 +25,6 @@ const Index = () => {
       <PixelDissolveDivider color="purple" density={30} />
       <SectionTransition direction="left">
         <AboutSection />
-      </SectionTransition>
-
-      <PixelDissolveDivider color="green" density={35} />
-      <SectionTransition>
-        <TechStackSection />
       </SectionTransition>
 
       <PixelDissolveDivider color="cyan" density={25} />

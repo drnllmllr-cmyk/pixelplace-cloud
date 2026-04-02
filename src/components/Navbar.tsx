@@ -22,7 +22,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src={logo} alt="PixelPlace.cloud" className="h-18 md:h-20 w-auto" />
+          <img src={logo} alt="PixelPlace.cloud" className="h-12 sm:h-16 md:h-20 w-auto" />
         </div>
 
         <div className="hidden md:flex items-center gap-8">

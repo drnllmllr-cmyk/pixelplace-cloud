@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8 mb-10">
         <div className="md:col-span-2">
-          <img src={logo} alt="PixelPlace.cloud" className="h-18 md:h-20 w-auto mb-4" />
+          <img src={logo} alt="PixelPlace.cloud" className="h-12 sm:h-16 md:h-20 w-auto mb-4" />
           <p className="text-sm text-muted-foreground max-w-sm">
             Building beautiful websites and powerful applications for modern businesses.
           </p>

@@ -6,7 +6,6 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid">
       <ParticleField />
       <div className="absolute inset-0 bg-radial-glow" />
-      {/* Decorative orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-neon-purple/5 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
 
@@ -28,7 +27,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body"
         >
-          HD Wallpapers, Website Development & App Development
+          Website Development & App Development
         </motion.p>
 
         <motion.div

@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: "Marcus Rodriguez",
     role: "Founder, Vaultrix",
-    quote: "The HD wallpapers we purchased are absolutely breathtaking. Professional quality that elevated our entire brand.",
+    quote: "From design to deployment, PixelPlace delivered a beautiful, responsive site that elevated our entire brand.",
     rating: 5,
     avatar: "MR",
   },

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe, Camera, Monitor } from "lucide-react";
+import { Globe, Monitor } from "lucide-react";
 
 const AboutSection = () => (
   <section id="about" className="relative py-24">
@@ -14,10 +14,10 @@ const AboutSection = () => (
             About <span className="text-gradient-primary">PixelPlace</span>
           </h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            PixelPlace.cloud delivers high-performance digital solutions for modern businesses. We specialize in custom website and app development using platforms like GitHub, Cloudflare, WordPress, Wix, GoDaddy, Lovable, and Google Scripts — plus stunning AI-enhanced HD wallpapers.
+            PixelPlace.cloud delivers high-performance digital solutions for modern businesses. We specialize in custom website and app development using platforms like GitHub, Cloudflare, WordPress, Wix, GoDaddy, Lovable, and Google Scripts.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Led by professionals with over 20 years of hands-on experience, we work with startups, small businesses, and enterprise clients to build scalable websites, powerful apps, and beautiful digital content.
+            Led by professionals with over 20 years of hands-on experience, we work with startups, small businesses, and enterprise clients to build scalable websites and powerful applications.
           </p>
         </motion.div>
 
@@ -30,7 +30,6 @@ const AboutSection = () => (
           {[
             { icon: Globe, title: "Website Development", desc: "Custom websites built for performance, SEO, and scale" },
             { icon: Monitor, title: "App Development", desc: "Full-stack applications with backend integration and cloud deployment" },
-            { icon: Camera, title: "HD Wallpapers", desc: "Professional photography enhanced with AI for stunning digital wallpapers" },
           ].map((item, i) => (
             <div key={i} className="glass card-glow rounded-xl p-5 flex items-start gap-4">
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">

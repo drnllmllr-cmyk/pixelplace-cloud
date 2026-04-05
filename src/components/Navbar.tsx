@@ -9,7 +9,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const scrollTo = (id: string) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
+    const sectionId = id.toLowerCase().replace(/\s+/g, "-");
+    // Map nav items to section IDs
+    const idMap: Record<string, string> = { "about-us": "about" };
+    document.getElementById(idMap[sectionId] || sectionId)?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 

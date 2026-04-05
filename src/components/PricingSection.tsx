@@ -100,16 +100,18 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <button
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                className={`w-full py-3 rounded-xl font-display font-semibold text-sm transition-all ${
+              <a
+                href={tier.payLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full py-3 rounded-xl font-display font-semibold text-sm transition-all text-center ${
                   tier.popular
                     ? "btn-glow text-primary-foreground"
                     : "border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
                 }`}
               >
                 Pay Now
-              </button>
+              </a>
             </motion.div>
           ))}
         </div>

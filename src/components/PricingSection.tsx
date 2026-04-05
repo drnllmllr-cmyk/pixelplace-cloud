@@ -52,7 +52,7 @@ const PricingSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            Simple, <span className="text-gradient-primary">Transparent</span> Pricing
+            Major Discount! <span className="text-gradient-primary">This sale won't last long</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Choose a plan that fits your needs. No hidden fees, no surprises.

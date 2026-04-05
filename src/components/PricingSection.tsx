@@ -11,6 +11,7 @@ const tiers = [
     glow: "glow-cyan",
     gradient: "from-primary to-primary/60",
     popular: true,
+    payLink: "https://buy.stripe.com/dRm28s9Ik3SV81p2jg7Zu00",
     features: [
       "Front End Website Development",
       "Google Sheets, App Scripts",
@@ -27,6 +28,7 @@ const tiers = [
     icon: Monitor,
     glow: "glow-cyan",
     gradient: "from-primary to-accent/60",
+    payLink: "https://buy.stripe.com/dRmeVe8EgdtvdlJ8HE7Zu01",
     features: [
       "Back End App Development",
       "API Integration & Development",
@@ -98,16 +100,18 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <button
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                className={`w-full py-3 rounded-xl font-display font-semibold text-sm transition-all ${
+              <a
+                href={tier.payLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full py-3 rounded-xl font-display font-semibold text-sm transition-all text-center ${
                   tier.popular
                     ? "btn-glow text-primary-foreground"
                     : "border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
                 }`}
               >
                 Pay Now
-              </button>
+              </a>
             </motion.div>
           ))}
         </div>

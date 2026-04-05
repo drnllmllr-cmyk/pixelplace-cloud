@@ -11,6 +11,7 @@ const tiers = [
     glow: "glow-cyan",
     gradient: "from-primary to-primary/60",
     popular: true,
+    payLink: "https://buy.stripe.com/dRm28s9Ik3SV81p2jg7Zu00",
     features: [
       "Front End Website Development",
       "Google Sheets, App Scripts",
@@ -27,6 +28,7 @@ const tiers = [
     icon: Monitor,
     glow: "glow-cyan",
     gradient: "from-primary to-accent/60",
+    payLink: "https://buy.stripe.com/dRmeVe8EgdtvdlJ8HE7Zu01",
     features: [
       "Back End App Development",
       "API Integration & Development",

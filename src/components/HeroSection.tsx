@@ -16,7 +16,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
-            Secure the Future{" "}
+            Build the Future{" "}
             <span className="text-gradient-primary">in the Cloud</span>
           </h1>
         </motion.div>

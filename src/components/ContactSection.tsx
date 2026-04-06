@@ -53,10 +53,16 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            Get In <span className="text-gradient-primary">Touch</span>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-2">
+            Contact Us
           </h2>
-          <p className="text-muted-foreground">Ready to build something incredible? Let's talk.</p>
+          <p className="text-xl md:text-2xl font-display font-semibold text-foreground mb-1">
+            Get More Customers with a Better Website
+          </p>
+          <a href="tel:5615035443" className="text-primary hover:text-primary/80 font-bold text-lg transition-colors">
+            (561) 503-5443
+          </a>
+          <p className="text-muted-foreground mt-3">Fast, modern websites starting at $349. Simple, affordable, and built to help your business grow.</p>
         </motion.div>
 
         <AnimatePresence mode="wait">

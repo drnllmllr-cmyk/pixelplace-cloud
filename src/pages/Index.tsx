@@ -43,6 +43,11 @@ const Index = () => {
         <TestimonialsSection />
       </SectionTransition>
 
+      <PixelDissolveDivider color="cyan" density={25} />
+      <SectionTransition direction="right">
+        <OurWorkSection />
+      </SectionTransition>
+
       <PixelDissolveDivider color="purple" density={20} />
       <SectionTransition>
         <PricingSection />

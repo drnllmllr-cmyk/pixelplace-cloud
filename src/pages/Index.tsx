@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import WebDevelopmentSection from "@/components/WebDevelopmentSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import OurWorkSection from "@/components/OurWorkSection";
 import PricingSection from "@/components/PricingSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";

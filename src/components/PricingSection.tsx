@@ -198,7 +198,7 @@ const PricingSection = () => {
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                   className="block w-full py-3 rounded-xl font-display font-semibold text-sm transition-all text-center border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
                 >
-                  Get Started
+                  Pay Now
                 </button>
               )}
             </motion.div>

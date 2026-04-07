@@ -249,16 +249,18 @@ const PenetrationTesting = () => {
                 <h3 className="text-xl font-display font-bold text-foreground mb-3">{p.name}</h3>
                 <div className="text-3xl font-display font-bold text-primary mb-4">{p.price}</div>
                 <p className="text-sm text-muted-foreground mb-6">{p.desc}</p>
-                <Link
-                  to="/#contact"
+                <a
+                  href={p.payLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`block w-full py-3 rounded-xl font-display font-semibold text-sm text-center transition-all ${
                     p.highlight
                       ? "btn-glow text-primary-foreground"
                       : "border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
                   }`}
                 >
-                  Get Started
-                </Link>
+                  Pay Now
+                </a>
               </motion.div>
             ))}
           </div>

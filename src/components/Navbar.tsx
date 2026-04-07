@@ -12,6 +12,10 @@ const Navbar = () => {
     const sectionId = id.toLowerCase().replace(/\s+/g, "-");
     // Map nav items to section IDs
     const idMap: Record<string, string> = { "about-us": "about" };
+    if (sectionId === "penetration-testing") {
+      window.location.href = "/penetration-testing";
+      return;
+    }
     document.getElementById(idMap[sectionId] || sectionId)?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };

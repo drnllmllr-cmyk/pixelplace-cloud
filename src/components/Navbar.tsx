@@ -46,7 +46,7 @@ const Navbar = () => {
             onClick={() => scrollTo("Contact")}
             className="btn-glow px-5 py-2 rounded-lg text-sm font-semibold text-primary-foreground"
           >
-            Get Started
+            Free Consultation
           </button>
         </div>
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Globe, Monitor } from "lucide-react";
+import { Check, Globe, Monitor, Shield, Mail, Link2, Search, Wrench } from "lucide-react";
 
 const tiers = [
   {
@@ -37,6 +37,86 @@ const tiers = [
       "Ongoing Maintenance & Support",
     ],
   },
+  {
+    name: "Website Security & Protection",
+    price: "$199.00",
+    period: "/per website",
+    description: "Protect your website from threats with vulnerability scanning, SSL enforcement, and bot protection",
+    icon: Shield,
+    glow: "glow-cyan",
+    gradient: "from-secondary to-secondary/60",
+    payLink: "",
+    features: [
+      "Basic vulnerability scan",
+      "Security hardening",
+      "SSL / HTTPS enforcement",
+      "Bot & attack protection (Cloudflare)",
+    ],
+  },
+  {
+    name: "Business Email Setup & Protection",
+    price: "$150.00",
+    period: "/per setup",
+    description: "Professional email configuration with spam filtering and security for your business domain",
+    icon: Mail,
+    glow: "glow-cyan",
+    gradient: "from-accent to-accent/60",
+    payLink: "",
+    features: [
+      "Professional email (name@company.com)",
+      "MX record configuration",
+      "Spam filtering (AppRiver / Microsoft / Google)",
+      "Email security setup",
+    ],
+  },
+  {
+    name: "Domain & DNS Management",
+    price: "$99.00",
+    period: "/per domain",
+    description: "Complete domain setup with DNS configuration, record management, and seamless domain migration",
+    icon: Link2,
+    glow: "glow-cyan",
+    gradient: "from-primary to-secondary/60",
+    payLink: "",
+    features: [
+      "Domain connection",
+      "DNS configuration",
+      "MX, A, CNAME records",
+      "Domain migration",
+    ],
+  },
+  {
+    name: "SEO Optimization (Starter)",
+    price: "$115.00",
+    period: "/per website",
+    description: "Get found on Google with indexing, meta tags, speed optimization, and mobile-first improvements",
+    icon: Search,
+    glow: "glow-cyan",
+    gradient: "from-accent to-primary/60",
+    payLink: "",
+    features: [
+      "Google indexing",
+      "Meta tags",
+      "Page speed optimization",
+      "Mobile optimization",
+    ],
+  },
+  {
+    name: "Website Maintenance & Support",
+    price: "$75.00",
+    period: "/per month",
+    description: "Keep your website running smoothly with updates, monitoring, and ongoing support",
+    icon: Wrench,
+    glow: "glow-cyan",
+    gradient: "from-secondary to-accent/60",
+    payLink: "",
+    features: [
+      "Updates & fixes",
+      "Performance monitoring",
+      "Security monitoring",
+      "Minor changes",
+    ],
+  },
 ];
 
 const PricingSection = () => {
@@ -59,14 +139,14 @@ const PricingSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ delay: i * 0.08 }}
               className={`relative glass rounded-2xl p-8 border border-border/50 card-glow group ${
                 tier.popular ? "md:-mt-4 md:mb-[-1rem]" : ""
               }`}
@@ -100,18 +180,27 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <a
-                href={tier.payLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`block w-full py-3 rounded-xl font-display font-semibold text-sm transition-all text-center ${
-                  tier.popular
-                    ? "btn-glow text-primary-foreground"
-                    : "border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
-                }`}
-              >
-                Pay Now
-              </a>
+              {tier.payLink ? (
+                <a
+                  href={tier.payLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full py-3 rounded-xl font-display font-semibold text-sm transition-all text-center ${
+                    tier.popular
+                      ? "btn-glow text-primary-foreground"
+                      : "border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
+                  }`}
+                >
+                  Pay Now
+                </a>
+              ) : (
+                <button
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                  className="block w-full py-3 rounded-xl font-display font-semibold text-sm transition-all text-center border border-border/60 text-foreground hover:border-primary/40 hover:text-primary"
+                >
+                  Get Started
+                </button>
+              )}
             </motion.div>
           ))}
         </div>

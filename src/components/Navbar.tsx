@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Services", "About Us", "Website Development"];
+const navItems = ["Services", "About Us", "Website Development", "Penetration Testing"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -12,6 +12,10 @@ const Navbar = () => {
     const sectionId = id.toLowerCase().replace(/\s+/g, "-");
     // Map nav items to section IDs
     const idMap: Record<string, string> = { "about-us": "about" };
+    if (sectionId === "penetration-testing") {
+      window.location.href = "/penetration-testing";
+      return;
+    }
     document.getElementById(idMap[sectionId] || sectionId)?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
@@ -42,7 +46,7 @@ const Navbar = () => {
             onClick={() => scrollTo("Contact")}
             className="btn-glow px-5 py-2 rounded-lg text-sm font-semibold text-primary-foreground"
           >
-            Get Started
+            Free Consultation
           </button>
         </div>
 

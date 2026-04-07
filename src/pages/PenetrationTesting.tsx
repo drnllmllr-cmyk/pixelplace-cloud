@@ -61,9 +61,9 @@ const steps = [
 ];
 
 const pricing = [
-  { name: "Basic Security Assessment", price: "Starting at $300", desc: "Ideal for small websites and basic vulnerability checks.", highlight: false },
-  { name: "Standard Penetration Test", price: "$500 – $1,000", desc: "Includes deeper testing of authentication, inputs, and application logic.", highlight: true },
-  { name: "Advanced Testing", price: "Custom Pricing", desc: "Designed for larger applications, APIs, and complex systems.", highlight: false },
+  { name: "Basic Security Assessment", price: "$300.00", desc: "Ideal for small websites and basic vulnerability checks.", highlight: false, payLink: "https://buy.stripe.com/aFa3cwg6I613bdB3nk7Zu02" },
+  { name: "Standard Penetration Test", price: "$800.00", desc: "Includes deeper testing of authentication, inputs, and application logic.", highlight: true, payLink: "https://buy.stripe.com/aFaeVe7AcexzgxV7DA7Zu03" },
+  { name: "Advanced Testing", price: "$2,000.00", desc: "Designed for larger applications, APIs, and complex systems.", highlight: false, payLink: "https://buy.stripe.com/4gM14o1bO4WZ5Th2jg7Zu04" },
 ];
 
 const whyUs = [

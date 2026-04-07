@@ -1,22 +1,39 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navItems = ["Services", "About Us", "Website Development", "Penetration Testing"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollTo = (id: string) => {
     const sectionId = id.toLowerCase().replace(/\s+/g, "-");
-    // Map nav items to section IDs
     const idMap: Record<string, string> = { "about-us": "about" };
     if (sectionId === "penetration-testing") {
-      window.location.href = "/penetration-testing";
+      navigate("/penetration-testing");
+      setOpen(false);
       return;
     }
-    document.getElementById(idMap[sectionId] || sectionId)?.scrollIntoView({ behavior: "smooth" });
+    const targetId = idMap[sectionId] || sectionId;
+    if (location.pathname !== "/") {
+      navigate("/#" + targetId);
+      return;
+    }
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
+
+  const handleConsultation = () => {
+    if (location.pathname !== "/") {
+      navigate("/#contact");
+      return;
+    }
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 

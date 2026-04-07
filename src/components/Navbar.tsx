@@ -60,7 +60,7 @@ const Navbar = () => {
             </button>
           ))}
           <button
-            onClick={() => scrollTo("Contact")}
+            onClick={handleConsultation}
             className="btn-glow px-5 py-2 rounded-lg text-sm font-semibold text-primary-foreground"
           >
             Free Consultation

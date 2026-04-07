@@ -45,7 +45,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 glass-strong"
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => { if (location.pathname !== "/") { navigate("/"); } else { window.scrollTo({ top: 0, behavior: "smooth" }); } }}>
           <img src={logo} alt="PixelPlace.cloud" className="h-12 sm:h-16 md:h-20 w-auto" />
         </div>
 

@@ -1,22 +1,39 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navItems = ["Services", "About Us", "Website Development", "Penetration Testing"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollTo = (id: string) => {
     const sectionId = id.toLowerCase().replace(/\s+/g, "-");
-    // Map nav items to section IDs
     const idMap: Record<string, string> = { "about-us": "about" };
     if (sectionId === "penetration-testing") {
-      window.location.href = "/penetration-testing";
+      navigate("/penetration-testing");
+      setOpen(false);
       return;
     }
-    document.getElementById(idMap[sectionId] || sectionId)?.scrollIntoView({ behavior: "smooth" });
+    const targetId = idMap[sectionId] || sectionId;
+    if (location.pathname !== "/") {
+      navigate("/#" + targetId);
+      return;
+    }
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
+
+  const handleConsultation = () => {
+    if (location.pathname !== "/") {
+      navigate("/#contact");
+      return;
+    }
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 
@@ -28,7 +45,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 glass-strong"
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => { if (location.pathname !== "/") { navigate("/"); } else { window.scrollTo({ top: 0, behavior: "smooth" }); } }}>
           <img src={logo} alt="PixelPlace.cloud" className="h-12 sm:h-16 md:h-20 w-auto" />
         </div>
 
@@ -43,7 +60,7 @@ const Navbar = () => {
             </button>
           ))}
           <button
-            onClick={() => scrollTo("Contact")}
+            onClick={handleConsultation}
             className="btn-glow px-5 py-2 rounded-lg text-sm font-semibold text-primary-foreground"
           >
             Free Consultation

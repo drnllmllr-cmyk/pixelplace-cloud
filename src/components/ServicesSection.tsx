@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Globe, Monitor } from "lucide-react";
 
 const services = [
-  { icon: Globe, title: "Website Development", desc: "Modern, responsive websites built with cutting-edge frameworks, deployed on GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more.", color: "neon-blue" },
+  { icon: Globe, title: "Website Development", desc: "Websites Built to grow and enhance your business! Modern, responsive websites built with cutting-edge frameworks, deployed on GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more.", color: "neon-blue" },
   { icon: Monitor, title: "App Development", desc: "Custom applications with backend integration, API development, database design, and seamless cloud deployment.", color: "neon-green" },
 ];
 
@@ -22,9 +22,9 @@ const ServicesSection = () => (
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-          Our <span className="text-gradient-primary">Services</span>
+          Our Core <span className="text-gradient-primary">Services</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">End-to-end website and application development for modern businesses.</p>
+        <p className="text-muted-foreground max-w-xl mx-auto">End-to-end website, application development and manual penetration testing.</p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">

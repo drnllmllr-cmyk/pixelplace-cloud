@@ -5,6 +5,7 @@ import OurWorkSection from "@/components/OurWorkSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import PricingSection from "@/components/PricingSection";
 import PixelDissolveDivider from "@/components/PixelDissolveDivider";
 import SectionTransition from "@/components/SectionTransition";
 
@@ -30,6 +31,11 @@ const Index = () => {
       </SectionTransition>
 
       <PixelDissolveDivider color="green" density={25} />
+      <SectionTransition>
+        <PricingSection />
+      </SectionTransition>
+
+      <PixelDissolveDivider color="cyan" density={25} />
       <SectionTransition>
         <ContactSection />
       </SectionTransition>

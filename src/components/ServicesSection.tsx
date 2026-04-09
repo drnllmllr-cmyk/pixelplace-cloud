@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
-import { Globe, Monitor } from "lucide-react";
+import { Globe, Monitor, Shield } from "lucide-react";
 
 const services = [
   { icon: Globe, title: "Website Development", desc: "Websites Built to grow and enhance your business! Modern, responsive websites built with cutting-edge frameworks, deployed on GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more.", color: "neon-blue" },
   { icon: Monitor, title: "App Development", desc: "Custom applications with backend integration, API development, database design, and seamless cloud deployment.", color: "neon-green" },
+  { icon: Shield, title: "Penetration Testing", desc: "Professional remote penetration testing for websites and applications. Identify vulnerabilities, reduce risk, and protect sensitive data from real-world threats.", color: "neon-purple" },
 ];
 
 const colorMap: Record<string, string> = {
   "neon-blue": "text-neon-blue group-hover:shadow-[0_0_30px_hsl(210_100%_55%/0.3)]",
   "neon-green": "text-neon-green group-hover:shadow-[0_0_30px_hsl(160_80%_45%/0.3)]",
+  "neon-purple": "text-primary group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)]",
 };
 
 const ServicesSection = () => (
@@ -27,7 +29,7 @@ const ServicesSection = () => (
         <p className="text-muted-foreground max-w-xl mx-auto">End-to-end website, application development and manual penetration testing.</p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         {services.map((s, i) => (
           <motion.div
             key={s.title}

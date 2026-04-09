@@ -13,18 +13,29 @@ const Navbar = () => {
 
   const scrollTo = (id: string) => {
     const sectionId = id.toLowerCase().replace(/\s+/g, "-");
-    const idMap: Record<string, string> = { "about-us": "about" };
+
+    if (sectionId === "about-us") {
+      navigate("/about");
+      setOpen(false);
+      return;
+    }
+    if (sectionId === "website-development") {
+      navigate("/website-development");
+      setOpen(false);
+      return;
+    }
     if (sectionId === "penetration-testing") {
       navigate("/penetration-testing");
       setOpen(false);
       return;
     }
-    const targetId = idMap[sectionId] || sectionId;
+
+    // For "services" — scroll on homepage
     if (location.pathname !== "/") {
-      navigate("/#" + targetId);
-      return;
+      navigate("/#" + sectionId);
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     }
-    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 
@@ -46,7 +57,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => { if (location.pathname !== "/") { navigate("/"); } else { window.scrollTo({ top: 0, behavior: "smooth" }); } }}>
-          <img src={logo} alt="PixelPlace.cloud" className="h-12 sm:h-16 md:h-20 w-auto" />
+          <img src={logo} alt="PixelPlace.cloud" className="h-12 sm:h-14 md:h-20 w-auto" />
         </div>
 
         <div className="hidden md:flex items-center gap-8">

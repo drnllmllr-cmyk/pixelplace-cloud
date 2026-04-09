@@ -91,7 +91,7 @@ const PenetrationTesting = () => {
               <span className="text-sm font-display text-primary">Professional Security Services</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
-              Penetration Testing <span className="text-gradient-primary">Services</span>
+              Secure the Future <span className="text-gradient-primary">in the Cloud</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
               Identify vulnerabilities before attackers do.

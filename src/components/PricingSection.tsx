@@ -45,7 +45,7 @@ const tiers = [
     icon: Shield,
     glow: "glow-cyan",
     gradient: "from-secondary to-secondary/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/5kQbJ27Ac0GJbdB9LI7Zu05",
     features: [
       "Basic vulnerability scan",
       "Security hardening",
@@ -61,7 +61,7 @@ const tiers = [
     icon: Mail,
     glow: "glow-cyan",
     gradient: "from-accent to-accent/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/aFa00kcUwcpra9xe1Y7Zu06",
     features: [
       "Professional email (name@company.com)",
       "MX record configuration",
@@ -77,7 +77,7 @@ const tiers = [
     icon: Link2,
     glow: "glow-cyan",
     gradient: "from-primary to-secondary/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/9B63cw6w8ahj2H50b87Zu07",
     features: [
       "Domain connection",
       "DNS configuration",
@@ -93,7 +93,7 @@ const tiers = [
     icon: Search,
     glow: "glow-cyan",
     gradient: "from-accent to-primary/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/14A28saMoexzbdB7DA7Zu08",
     features: [
       "Google indexing",
       "Meta tags",
@@ -109,7 +109,7 @@ const tiers = [
     icon: Wrench,
     glow: "glow-cyan",
     gradient: "from-secondary to-accent/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/00w6oIaMoahj95t9LI7Zu09",
     features: [
       "Updates & fixes",
       "Performance monitoring",

@@ -4,7 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Gallery from "./pages/Gallery";
+import About from "./pages/About";
+import WebDevelopment from "./pages/WebDevelopment";
 import PenetrationTesting from "./pages/PenetrationTesting";
 import NotFound from "./pages/NotFound";
 import ScrollToHash from "./components/ScrollToHash";
@@ -20,7 +21,8 @@ const App = () => (
         <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/website-development" element={<WebDevelopment />} />
           <Route path="/penetration-testing" element={<PenetrationTesting />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

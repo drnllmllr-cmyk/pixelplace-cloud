@@ -1,12 +1,8 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import AboutSection from "@/components/AboutSection";
-import WebDevelopmentSection from "@/components/WebDevelopmentSection";
-import WhyChooseSection from "@/components/WhyChooseSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import OurWorkSection from "@/components/OurWorkSection";
-import PricingSection from "@/components/PricingSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import PixelDissolveDivider from "@/components/PixelDissolveDivider";
@@ -23,21 +19,6 @@ const Index = () => {
         <ServicesSection />
       </SectionTransition>
 
-      <PixelDissolveDivider color="purple" density={30} />
-      <SectionTransition direction="left">
-        <AboutSection />
-      </SectionTransition>
-
-      <PixelDissolveDivider color="cyan" density={25} />
-      <SectionTransition direction="right">
-        <WebDevelopmentSection />
-      </SectionTransition>
-
-      <PixelDissolveDivider color="purple" />
-      <SectionTransition>
-        <WhyChooseSection />
-      </SectionTransition>
-
       <PixelDissolveDivider color="cyan" density={25} />
       <SectionTransition direction="left">
         <TestimonialsSection />
@@ -46,11 +27,6 @@ const Index = () => {
       <PixelDissolveDivider color="cyan" density={25} />
       <SectionTransition direction="right">
         <OurWorkSection />
-      </SectionTransition>
-
-      <PixelDissolveDivider color="purple" density={20} />
-      <SectionTransition>
-        <PricingSection />
       </SectionTransition>
 
       <PixelDissolveDivider color="green" density={25} />

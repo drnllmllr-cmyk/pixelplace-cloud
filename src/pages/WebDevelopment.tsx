@@ -52,7 +52,7 @@ const tiers = [
     description: "Protect your website from threats with vulnerability scanning, SSL enforcement, and bot protection",
     icon: Shield,
     gradient: "from-secondary to-secondary/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/5kQbJ27Ac0GJbdB9LI7Zu05",
     features: [
       "Basic vulnerability scan",
       "Security hardening",
@@ -67,7 +67,7 @@ const tiers = [
     description: "Professional email configuration with spam filtering and security for your business domain",
     icon: Mail,
     gradient: "from-accent to-accent/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/aFa00kcUwcpra9xe1Y7Zu06",
     features: [
       "Professional email (name@company.com)",
       "MX record configuration",
@@ -82,7 +82,7 @@ const tiers = [
     description: "Complete domain setup with DNS configuration, record management, and seamless domain migration",
     icon: Link2,
     gradient: "from-primary to-secondary/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/9B63cw6w8ahj2H50b87Zu07",
     features: [
       "Domain connection",
       "DNS configuration",
@@ -97,7 +97,7 @@ const tiers = [
     description: "Get found on Google with indexing, meta tags, speed optimization, and mobile-first improvements",
     icon: Search,
     gradient: "from-accent to-primary/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/14A28saMoexzbdB7DA7Zu08",
     features: [
       "Google indexing",
       "Meta tags",
@@ -112,7 +112,7 @@ const tiers = [
     description: "Keep your website running smoothly with updates, monitoring, and ongoing support",
     icon: Wrench,
     gradient: "from-secondary to-accent/60",
-    payLink: "",
+    payLink: "https://buy.stripe.com/00w6oIaMoahj95t9LI7Zu09",
     features: [
       "Updates & fixes",
       "Performance monitoring",

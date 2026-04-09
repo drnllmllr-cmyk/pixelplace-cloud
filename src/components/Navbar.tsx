@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Services", "About Us", "Website Development", "Penetration Testing"];
+const navItems = ["Home", "Services", "About Us", "Website Development", "Penetration Testing"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,6 +13,13 @@ const Navbar = () => {
 
   const scrollTo = (id: string) => {
     const sectionId = id.toLowerCase().replace(/\s+/g, "-");
+
+    if (sectionId === "home") {
+      navigate("/");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setOpen(false);
+      return;
+    }
 
     if (sectionId === "about-us") {
       navigate("/about");

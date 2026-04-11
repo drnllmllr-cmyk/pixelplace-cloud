@@ -16,8 +16,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
-            Build the Future{" "}
-            <span className="text-gradient-primary">in the Cloud</span>
+            Premium Web Development &{" "}
+            <span className="text-gradient-primary">Penetration Testing</span>
           </h1>
         </motion.div>
 
@@ -27,7 +27,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body"
         >
-          Website Development & App Development
+          for Modern Business
         </motion.p>
 
         <motion.div

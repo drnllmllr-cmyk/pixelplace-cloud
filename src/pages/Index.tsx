@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
 import OurWorkSection from "@/components/OurWorkSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
@@ -16,18 +15,13 @@ const Index = () => {
       <HeroSection />
 
       <PixelDissolveDivider color="cyan" />
-      <SectionTransition>
-        <ServicesSection />
+      <SectionTransition direction="right">
+        <OurWorkSection />
       </SectionTransition>
 
       <PixelDissolveDivider color="cyan" density={25} />
       <SectionTransition direction="left">
         <TestimonialsSection />
-      </SectionTransition>
-
-      <PixelDissolveDivider color="cyan" density={25} />
-      <SectionTransition direction="right">
-        <OurWorkSection />
       </SectionTransition>
 
       <PixelDissolveDivider color="green" density={25} />

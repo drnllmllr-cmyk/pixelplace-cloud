@@ -48,7 +48,7 @@ const About = () => {
               About <span className="text-gradient-primary">PixelPlace</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-              PixelPlace.cloud businesses look professional, stay secure, and grow online — backed by 20+ years of experience from small to enterprise businesses.
+              PixelPlace.cloud helps businesses look professional and grow online — backed by 20+ years of experience working with small and enterprise companies.
             </p>
             <p className="text-base text-foreground font-semibold max-w-2xl mx-auto">
               No junior developers. No outsourcing. Just senior-level work at small business prices.

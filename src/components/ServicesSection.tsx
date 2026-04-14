@@ -4,7 +4,7 @@ import { Globe, Monitor, Shield } from "lucide-react";
 const services = [
   { icon: Globe, title: "Website Development", desc: "Websites Built to grow and enhance your business! Modern, responsive websites built with cutting-edge frameworks, deployed on GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more.", color: "neon-blue" },
   { icon: Monitor, title: "App Development", desc: "Custom applications with backend integration, API development, database design, and seamless cloud deployment.", color: "neon-green" },
-  { icon: Shield, title: "Penetration Testing", desc: "Professional remote penetration testing for websites and applications. Identify vulnerabilities, reduce risk, and protect sensitive data from real-world threats.", color: "neon-purple" },
+  { icon: Shield, title: "Website Security & Protection", desc: "Protect your website from threats with vulnerability scanning, SSL enforcement, security hardening, and bot protection.", color: "neon-purple" },
 ];
 
 const colorMap: Record<string, string> = {
@@ -26,7 +26,7 @@ const ServicesSection = () => (
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
           Our Core <span className="text-gradient-primary">Services</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">End-to-end website, application development and manual penetration testing.</p>
+        <p className="text-muted-foreground max-w-xl mx-auto">End-to-end website and application development with security and support.</p>
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">

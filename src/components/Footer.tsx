@@ -33,7 +33,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="hover:text-primary transition-colors cursor-pointer" onClick={() => goTo("/website-development")}>Website Development</li>
               <li className="hover:text-primary transition-colors cursor-pointer" onClick={() => goTo("/website-development")}>App Development</li>
-              <li className="hover:text-primary transition-colors cursor-pointer" onClick={() => goTo("/penetration-testing")}>Penetration Testing</li>
+              
             </ul>
           </div>
           <div>

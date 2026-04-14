@@ -1,18 +1,15 @@
 import { motion } from "framer-motion";
-import { Globe, Monitor, Scaling, LayoutDashboard, Shield, Rocket, Award, Clock, Users, Star } from "lucide-react";
+import { Globe, Shield, Mail, Search, Wrench, Award, Clock, Users, Star } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const expertise = [
-  { icon: Globe, title: "Website Development", desc: "Custom websites built for performance, SEO, and scale" },
-  { icon: Monitor, title: "App Development", desc: "Full-stack applications with backend integration and cloud deployment" },
-];
-
-const reasons = [
-  { icon: Scaling, title: "Scalable Platforms", desc: "Websites and apps that grow with your business using modern cloud infrastructure." },
-  { icon: LayoutDashboard, title: "Modern Web Architecture", desc: "Fast, accessible, SEO-optimized web applications using GitHub, Cloudflare, WordPress, and more." },
-  { icon: Shield, title: "Reliable & Secure", desc: "Best practices in security, performance, and uptime so your site is always online." },
-  { icon: Rocket, title: "Rapid Deployment", desc: "From concept to launch in days — not months. We move fast without compromising quality." },
+const services = [
+  { icon: Globe, title: "Websites & Web Apps", desc: "Custom, fast, and built to convert" },
+  { icon: Shield, title: "Security & Protection", desc: "Keep your business and customers safe" },
+  { icon: Mail, title: "Email Setup", desc: "Look professional from day one" },
+  { icon: Search, title: "SEO", desc: "Get found by local customers searching right now" },
+  { icon: Wrench, title: "Maintenance", desc: "We handle it so you don't have to" },
 ];
 
 const stats = [
@@ -23,6 +20,17 @@ const stats = [
 ];
 
 const About = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goToContact = () => {
+    if (location.pathname !== "/") {
+      navigate("/#contact");
+    } else {
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -40,10 +48,10 @@ const About = () => {
               About <span className="text-gradient-primary">PixelPlace</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-              PixelPlace.cloud delivers high-performance digital solutions for modern businesses.
+              PixelPlace.cloud businesses look professional, stay secure, and grow online — backed by 20+ years of experience from small to enterprise businesses.
             </p>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              We specialize in custom website and app development using platforms like GitHub, Cloudflare, WordPress, Wix, GoDaddy, Lovable, and Google Scripts.
+            <p className="text-base text-foreground font-semibold max-w-2xl mx-auto">
+              No junior developers. No outsourcing. Just senior-level work at small business prices.
             </p>
           </motion.div>
         </div>
@@ -71,39 +79,23 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story */}
-      <section className="py-24 relative">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass rounded-2xl p-10 border border-border/50">
-            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-foreground">
-              20+ Years of <span className="text-gradient-primary">Hands-On Experience</span>
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Led by professionals with over 20 years of hands-on experience, we work with startups, small businesses, and enterprise clients to build scalable websites and powerful applications.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Our team combines deep technical knowledge with a passion for delivering results. From front-end design to backend architecture, we handle every layer of your project with precision and care.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Expertise */}
+      {/* What We Do */}
       <section className="py-24 relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-              Our <span className="text-gradient-primary">Expertise</span>
+              What We <span className="text-gradient-primary">Do</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {expertise.map((item, i) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {services.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: i === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
                 className="glass card-glow rounded-xl p-6 flex items-start gap-4"
               >
                 <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -119,37 +111,20 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Choose */}
+      {/* CTA */}
       <section className="py-24 relative">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-              Why Choose <span className="text-gradient-primary">PixelPlace</span>
+              Contact Us <span className="text-gradient-primary">Today!</span>
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Backed by 20+ years of experience, here's what sets us apart.
-            </p>
+            <button
+              onClick={goToContact}
+              className="btn-glow px-8 py-3.5 rounded-lg font-semibold text-primary-foreground text-base mt-6"
+            >
+              Schedule Free Consultation
+            </button>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {reasons.map((r, i) => (
-              <motion.div
-                key={r.title}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="glass card-glow rounded-xl p-6 flex items-start gap-4"
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <r.icon size={24} className="text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-display text-base font-semibold mb-2">{r.title}</h3>
-                  <p className="text-sm text-muted-foreground">{r.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

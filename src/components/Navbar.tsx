@@ -13,6 +13,7 @@ const Navbar = () => {
 
   const scrollTo = (id: string) => {
     const sectionId = id.toLowerCase().replace(/\s+/g, "-");
+    const targetSection = sectionId === "services" ? "pricing" : sectionId;
 
     if (sectionId === "home") {
       navigate("/");
@@ -34,9 +35,9 @@ const Navbar = () => {
 
     // For "services" — scroll on homepage
     if (location.pathname !== "/") {
-      navigate("/#" + sectionId);
+      navigate("/#" + targetSection);
     } else {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById(targetSection)?.scrollIntoView({ behavior: "smooth" });
     }
     setOpen(false);
   };

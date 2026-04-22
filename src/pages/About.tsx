@@ -47,11 +47,17 @@ const About = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
               About <span className="text-gradient-primary">PixelPlace</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-              PixelPlace.cloud helps businesses look professional and grow online — backed by 20+ years of experience working with small and enterprise companies.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-4">
+              At PixelPlace.cloud, we build fast, modern websites and applications that help businesses attract customers and grow.
             </p>
-            <p className="text-base text-foreground font-semibold max-w-2xl mx-auto">
-              No junior developers. No outsourcing. Just senior-level work at small business prices.
+            <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto mb-4">
+              Led by two senior tech professionals with 20+ years of experience, we’ve worked with organizations including NASA Headquarters, the Federal Reserve, and law enforcement agencies, delivering 500+ successful projects across small businesses and enterprise environments.
+            </p>
+            <p className="text-base text-foreground font-semibold max-w-3xl mx-auto">
+              No outsourcing. No junior developers. Just real experience, clean execution, and results that make your business look professional and credible online.
+            </p>
+            <p className="text-base text-primary font-semibold max-w-2xl mx-auto mt-4">
+              Enterprise-level quality — without the enterprise price.
             </p>
           </motion.div>
         </div>

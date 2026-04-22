@@ -3,7 +3,7 @@ import ParticleField from "./ParticleField";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid">
+    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden bg-grid pt-28 pb-16 md:pt-32 md:pb-20">
       <ParticleField />
       <div className="absolute inset-0 bg-radial-glow" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl animate-pulse-glow" />
@@ -43,7 +43,7 @@ const HeroSection = () => {
             Get Started
           </button>
           <button
-            onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
             className="glass px-8 py-3.5 rounded-lg font-semibold text-foreground hover:border-primary/40 transition-all duration-300 text-base"
           >
             View Solutions

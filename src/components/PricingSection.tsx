@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-import { Check, Globe, Monitor, Shield, Mail, Link2, Search, Wrench } from "lucide-react";
+import { Check, Globe, Monitor } from "lucide-react";
 
 const tiers = [
   {
     name: "Website Development",
-    price: "$349.00",
+    price: "$499.00",
     period: "/per website",
     description: "Elite AI & Experienced Developers delivering secure, high-performance websites and applications — built and deployed using modern platforms like GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more.",
     icon: Globe,
     glow: "glow-cyan",
     gradient: "from-primary to-primary/60",
     popular: true,
-    payLink: "https://buy.stripe.com/dRm28s9Ik3SV81p2jg7Zu00",
+    payLink: "https://buy.stripe.com/7sYdRa9IkgFH3L90b87Zu0a",
     features: [
       "Front End Website Development",
       "Google Sheets, App Scripts",
@@ -22,99 +22,19 @@ const tiers = [
   },
   {
     name: "App Development",
-    price: "$449.00",
+    price: "$899.00",
     period: "/per app",
     description: "Custom application development with modern frameworks, backend integration, and seamless deployment",
     icon: Monitor,
     glow: "glow-cyan",
     gradient: "from-primary to-accent/60",
-    payLink: "https://buy.stripe.com/dRmeVe8EgdtvdlJ8HE7Zu01",
+    payLink: "https://buy.stripe.com/eVq7sM4o00GJ95t9LI7Zu0b",
     features: [
       "Back End App Development",
       "API Integration & Development",
       "Database Design & Management",
       "Cloud Deployment & Hosting",
       "Ongoing Maintenance & Support",
-    ],
-  },
-  {
-    name: "Website Security & Protection",
-    price: "$199.00",
-    period: "/per website",
-    description: "Protect your website from threats with vulnerability scanning, SSL enforcement, and bot protection",
-    icon: Shield,
-    glow: "glow-cyan",
-    gradient: "from-secondary to-secondary/60",
-    payLink: "https://buy.stripe.com/5kQbJ27Ac0GJbdB9LI7Zu05",
-    features: [
-      "Basic vulnerability scan",
-      "Security hardening",
-      "SSL / HTTPS enforcement",
-      "Bot & attack protection (Cloudflare)",
-    ],
-  },
-  {
-    name: "Business Email Setup & Protection",
-    price: "$150.00",
-    period: "/per setup",
-    description: "Professional email configuration with spam filtering and security for your business domain",
-    icon: Mail,
-    glow: "glow-cyan",
-    gradient: "from-accent to-accent/60",
-    payLink: "https://buy.stripe.com/aFa00kcUwcpra9xe1Y7Zu06",
-    features: [
-      "Professional email (name@company.com)",
-      "MX record configuration",
-      "Spam filtering (AppRiver / Microsoft / Google)",
-      "Email security setup",
-    ],
-  },
-  {
-    name: "Domain & DNS Management",
-    price: "$99.00",
-    period: "/per domain",
-    description: "Complete domain setup with DNS configuration, record management, and seamless domain migration",
-    icon: Link2,
-    glow: "glow-cyan",
-    gradient: "from-primary to-secondary/60",
-    payLink: "https://buy.stripe.com/9B63cw6w8ahj2H50b87Zu07",
-    features: [
-      "Domain connection",
-      "DNS configuration",
-      "MX, A, CNAME records",
-      "Domain migration",
-    ],
-  },
-  {
-    name: "SEO Optimization (Starter)",
-    price: "$115.00",
-    period: "/per website",
-    description: "Get found on Google with indexing, meta tags, speed optimization, and mobile-first improvements",
-    icon: Search,
-    glow: "glow-cyan",
-    gradient: "from-accent to-primary/60",
-    payLink: "https://buy.stripe.com/14A28saMoexzbdB7DA7Zu08",
-    features: [
-      "Google indexing",
-      "Meta tags",
-      "Page speed optimization",
-      "Mobile optimization",
-    ],
-  },
-  {
-    name: "Website Maintenance & Support",
-    price: "$75.00",
-    period: "/per month",
-    description: "Keep your website running smoothly with updates, monitoring, and ongoing support",
-    icon: Wrench,
-    glow: "glow-cyan",
-    gradient: "from-secondary to-accent/60",
-    payLink: "https://buy.stripe.com/00w6oIaMoahj95t9LI7Zu09",
-    features: [
-      "Updates & fixes",
-      "Performance monitoring",
-      "Security monitoring",
-      "Minor changes",
     ],
   },
 ];
@@ -139,7 +59,7 @@ const PricingSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}

@@ -62,7 +62,7 @@ const ContactSection = () => {
           <a href="tel:5615035443" className="text-primary hover:text-primary/80 font-bold text-lg transition-colors">
             (561) 503-5443
           </a>
-          <p className="text-muted-foreground mt-3">Fast, modern websites starting at $349. Simple, affordable, and built to help your business grow.</p>
+          <p className="text-muted-foreground mt-3">Fast, modern websites starting at $499. Simple, affordable, and built to help your business grow.</p>
         </motion.div>
 
         <AnimatePresence mode="wait">

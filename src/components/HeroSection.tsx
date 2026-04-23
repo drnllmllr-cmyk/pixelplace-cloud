@@ -49,6 +49,15 @@ const HeroSection = () => {
             View Solutions
           </button>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mt-6 font-body"
+        >
+          We help local businesses turn their websites into lead-generating machines—built to convert visitors into customers and drive more visibility on Google and social media.
+        </motion.p>
       </div>
     </section>
   );

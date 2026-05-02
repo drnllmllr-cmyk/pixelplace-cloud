@@ -40,6 +40,7 @@ const Footer = () => {
             <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="hover:text-primary transition-colors cursor-pointer" onClick={() => goTo("/about")}>About</li>
+              <li className="hover:text-primary transition-colors cursor-pointer" onClick={() => goTo("/blog")}>Blog</li>
               <li className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</li>
               <li className="hover:text-primary transition-colors cursor-pointer" onClick={() => goTo("/", "contact")}>Contact</li>
             </ul>

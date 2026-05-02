@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Home", "Services", "About Us", "Website Development"];
+const navItems = ["Home", "Services", "About Us", "Website Development", "Blog"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -29,6 +29,11 @@ const Navbar = () => {
     }
     if (sectionId === "website-development") {
       navigate("/website-development");
+      setOpen(false);
+      return;
+    }
+    if (sectionId === "blog") {
+      navigate("/blog");
       setOpen(false);
       return;
     }

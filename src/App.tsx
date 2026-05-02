@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import WebDevelopment from "./pages/WebDevelopment";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 import NotFound from "./pages/NotFound";
 import ScrollToHash from "./components/ScrollToHash";
@@ -23,7 +25,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/website-development" element={<WebDevelopment />} />
-          
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

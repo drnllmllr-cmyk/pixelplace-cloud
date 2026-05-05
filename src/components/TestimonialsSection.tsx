@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 
 const partnerLogos = [
-  { name: "NexaFlow", accent: "text-primary" },
+  { name: "Avalon Resort", accent: "text-primary" },
   { name: "Vaultrix", accent: "text-secondary" },
   { name: "DataPulse", accent: "text-accent" },
   { name: "CloudBridge", accent: "text-primary" },
@@ -33,8 +33,8 @@ const testimonials = [
     avatar: "EP",
   },
   {
-    name: "James Okafor",
-    role: "CEO, CloudBridge",
+    name: "Lou",
+    role: "CEO, Oceans 735",
     quote: "Their team migrated our entire website seamlessly. Zero downtime, better performance. Highly recommended.",
     rating: 5,
     avatar: "JO",

@@ -27,8 +27,12 @@ const Navbar = () => {
       setOpen(false);
       return;
     }
-    if (sectionId === "website-development") {
-      navigate("/website-development");
+    if (sectionId === "website-development" || sectionId === "services") {
+      if (location.pathname !== "/website-development") {
+        navigate("/website-development#services");
+      } else {
+        document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+      }
       setOpen(false);
       return;
     }
@@ -38,7 +42,6 @@ const Navbar = () => {
       return;
     }
 
-    // For "services" — scroll on homepage
     if (location.pathname !== "/") {
       navigate("/#" + targetSection);
     } else {
@@ -82,7 +85,7 @@ const Navbar = () => {
             onClick={handleConsultation}
             className="btn-glow px-5 py-2 rounded-lg text-sm font-semibold text-primary-foreground"
           >
-            Free Consultation
+            Book Free Consultation
           </button>
         </div>
 

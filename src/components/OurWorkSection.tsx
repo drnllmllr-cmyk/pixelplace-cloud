@@ -36,9 +36,12 @@ const OurWorkSection = () => {
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
             Our <span className="text-gradient-primary">Work</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            See what we can build for your business — professional, modern websites tailored to your industry.
+          <p className="relative max-w-3xl mx-auto text-lg md:text-2xl font-display font-semibold leading-snug">
+            <span className="text-foreground">See what we can build for your business — </span>
+            <span className="text-gradient-primary italic">professional, modern websites</span>
+            <span className="text-foreground"> tailored to your industry.</span>
           </p>
+          <div className="mx-auto mt-4 h-[2px] w-24 bg-gradient-to-r from-transparent via-primary to-transparent" />
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

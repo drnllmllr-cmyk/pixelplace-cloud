@@ -14,13 +14,13 @@ const features = [
 const tiers = [
   {
     name: "Website Development",
-    price: "$349.00",
+    price: "$499.00",
     period: "/per website",
     description: "Elite AI & Experienced Developers delivering secure, high-performance websites and applications — built and deployed using modern platforms like GitHub, Cloudflare, WordPress, Wix, GoDaddy, and more.",
     icon: Globe,
     gradient: "from-primary to-primary/60",
     popular: true,
-    payLink: "https://buy.stripe.com/dRm28s9Ik3SV81p2jg7Zu00",
+    payLink: "https://buy.stripe.com/7sYdRa9IkgFH3L90b87Zu0a",
     features: [
       "Front End Website Development",
       "Google Sheets, App Scripts",
@@ -31,12 +31,12 @@ const tiers = [
   },
   {
     name: "App Development",
-    price: "$449.00",
+    price: "$899.00",
     period: "/per app",
     description: "Custom application development with modern frameworks, backend integration, and seamless deployment",
     icon: Monitor,
     gradient: "from-primary to-accent/60",
-    payLink: "https://buy.stripe.com/dRmeVe8EgdtvdlJ8HE7Zu01",
+    payLink: "https://buy.stripe.com/eVq7sM4o00GJ95t9LI7Zu0b",
     features: [
       "Back End App Development",
       "API Integration & Development",
@@ -146,7 +146,7 @@ const WebDevelopment = () => {
               to="/#contact"
               className="btn-glow px-8 py-4 rounded-xl font-display font-semibold text-primary-foreground inline-flex items-center justify-center gap-2"
             >
-              Free Consultation <ArrowRight size={18} />
+              Book Free Consultation <ArrowRight size={18} />
             </Link>
           </motion.div>
         </div>
@@ -182,7 +182,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-24 relative overflow-hidden">
+      <section id="services" className="py-24 relative overflow-hidden scroll-mt-28">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">

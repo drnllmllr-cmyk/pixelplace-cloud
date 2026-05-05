@@ -47,18 +47,32 @@ const About = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
               About <span className="text-gradient-primary">PixelPlace</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-4">
-              At PixelPlace.cloud, we build fast, modern websites and applications that help businesses attract customers and grow.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto mb-4">
-              Led by two senior tech professionals with 20+ years of experience, we’ve worked with organizations including NASA Headquarters, the Federal Reserve, and law enforcement agencies, delivering 500+ successful projects across small businesses and enterprise environments.
-            </p>
-            <p className="text-base text-foreground font-semibold max-w-3xl mx-auto">
-              No outsourcing. No junior developers. Just real experience, clean execution, and results that make your business look professional and credible online.
-            </p>
-            <p className="text-base text-primary font-semibold max-w-2xl mx-auto mt-4">
-              Enterprise-level quality — without the enterprise price.
-            </p>
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-xl md:text-3xl font-display font-semibold leading-snug">
+                <span className="text-foreground">At </span>
+                <span className="text-gradient-primary">PixelPlace.cloud</span>
+                <span className="text-foreground">, we build </span>
+                <span className="text-gradient-primary italic">fast, modern websites and applications</span>
+                <span className="text-foreground"> that help businesses attract customers and grow.</span>
+              </p>
+
+              <div className="mx-auto h-[2px] w-32 bg-gradient-to-r from-transparent via-primary to-transparent" />
+
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Led by two senior tech professionals with <span className="text-primary font-semibold">20+ years of experience</span>, we've worked with organizations including <span className="text-foreground font-semibold">NASA Headquarters</span>, the <span className="text-foreground font-semibold">Federal Reserve</span>, and law enforcement agencies, delivering <span className="text-primary font-semibold">500+ successful projects</span> across small businesses and enterprise environments.
+              </p>
+
+              <div className="glass rounded-2xl p-6 md:p-8 border border-primary/20 card-glow">
+                <p className="text-base md:text-lg text-foreground font-semibold leading-relaxed">
+                  No outsourcing. No junior developers. <span className="text-gradient-primary">Just real experience</span>, clean execution, and results that make your business look professional and credible online.
+                </p>
+              </div>
+
+              <p className="text-xl md:text-2xl font-display font-bold tracking-tight">
+                <span className="text-gradient-primary">Enterprise-level quality</span>
+                <span className="text-foreground"> — without the enterprise price.</span>
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>

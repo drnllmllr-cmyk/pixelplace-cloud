@@ -146,7 +146,7 @@ const WebDevelopment = () => {
               to="/#contact"
               className="btn-glow px-8 py-4 rounded-xl font-display font-semibold text-primary-foreground inline-flex items-center justify-center gap-2"
             >
-              Free Consultation <ArrowRight size={18} />
+              Book Free Consultation <ArrowRight size={18} />
             </Link>
           </motion.div>
         </div>

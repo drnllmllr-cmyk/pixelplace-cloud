@@ -21,15 +21,6 @@ const HeroSection = () => {
           </h1>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body"
-        >
-          for Modern Business
-        </motion.p>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,22 +33,26 @@ const HeroSection = () => {
           >
             Get Started
           </button>
-          <button
-            onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
-            className="glass px-8 py-3.5 rounded-lg font-semibold text-foreground hover:border-primary/40 transition-all duration-300 text-base"
+          <a
+            href="/website-development#services"
+            className="glass px-8 py-3.5 rounded-lg font-semibold text-foreground hover:border-primary/40 transition-all duration-300 text-base inline-flex items-center justify-center"
           >
             View Solutions
-          </button>
+          </a>
         </motion.div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mt-6 font-body"
+          className="mt-10 max-w-3xl mx-auto"
         >
-          We help local businesses turn their websites into lead-generating machines—built to convert visitors into customers and drive more visibility on Google and social media.
-        </motion.p>
+          <p className="relative text-2xl md:text-4xl font-display font-bold leading-tight tracking-tight">
+            <span className="text-foreground">We help businesses turn their websites into </span>
+            <span className="text-gradient-primary">lead-generating machines</span>
+          </p>
+          <div className="mx-auto mt-4 h-[2px] w-32 bg-gradient-to-r from-transparent via-primary to-transparent" />
+        </motion.div>
       </div>
     </section>
   );

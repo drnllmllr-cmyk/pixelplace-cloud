@@ -8,6 +8,8 @@ import About from "./pages/About";
 import WebDevelopment from "./pages/WebDevelopment";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import PdfGuides from "./pages/PdfGuides";
+import HelpDeskSupport from "./pages/HelpDeskSupport";
 
 import NotFound from "./pages/NotFound";
 import ScrollToHash from "./components/ScrollToHash";
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/website-development" element={<WebDevelopment />} />
+          <Route path="/pdf-guides" element={<PdfGuides />} />
+          <Route path="/help-desk-support" element={<HelpDeskSupport />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
 

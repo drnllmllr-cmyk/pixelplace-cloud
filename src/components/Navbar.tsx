@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Home", "Services", "About Us", "Website Development", "Blog"];
+const navItems = ["Home", "Professional PDF Guides", "Help Desk Support", "About Us", "Website Development", "Blog"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,7 +13,6 @@ const Navbar = () => {
 
   const scrollTo = (id: string) => {
     const sectionId = id.toLowerCase().replace(/\s+/g, "-");
-    const targetSection = sectionId === "services" ? "pricing" : sectionId;
 
     if (sectionId === "home") {
       navigate("/");
@@ -27,7 +26,17 @@ const Navbar = () => {
       setOpen(false);
       return;
     }
-    if (sectionId === "website-development" || sectionId === "services") {
+    if (sectionId === "professional-pdf-guides") {
+      navigate("/pdf-guides");
+      setOpen(false);
+      return;
+    }
+    if (sectionId === "help-desk-support") {
+      navigate("/help-desk-support");
+      setOpen(false);
+      return;
+    }
+    if (sectionId === "website-development") {
       if (location.pathname !== "/website-development") {
         navigate("/website-development#services");
       } else {
@@ -43,19 +52,10 @@ const Navbar = () => {
     }
 
     if (location.pathname !== "/") {
-      navigate("/#" + targetSection);
+      navigate("/#" + sectionId);
     } else {
-      document.getElementById(targetSection)?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     }
-    setOpen(false);
-  };
-
-  const handleConsultation = () => {
-    if (location.pathname !== "/") {
-      navigate("/#contact");
-      return;
-    }
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 
@@ -71,22 +71,24 @@ const Navbar = () => {
           <img src={logo} alt="PixelPlace.cloud" className="h-12 sm:h-14 md:h-20 w-auto" />
         </div>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <button
               key={item}
               onClick={() => scrollTo(item)}
-              className="text-sm font-body text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-sm font-body text-muted-foreground hover:text-primary transition-colors duration-300 whitespace-nowrap"
             >
               {item}
             </button>
           ))}
-          <button
-            onClick={handleConsultation}
-            className="btn-glow px-5 py-2 rounded-lg text-sm font-semibold text-primary-foreground"
+          <a
+            href="https://remotedesktop.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-glow px-5 py-2 rounded-lg text-sm font-semibold text-primary-foreground whitespace-nowrap"
           >
-            Book Free Consultation
-          </button>
+            Remote Support
+          </a>
         </div>
 
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
@@ -109,6 +111,14 @@ const Navbar = () => {
               {item}
             </button>
           ))}
+          <a
+            href="https://remotedesktop.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-left py-3 text-primary font-semibold"
+          >
+            Remote Support
+          </a>
         </motion.div>
       )}
     </motion.nav>

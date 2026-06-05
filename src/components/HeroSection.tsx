@@ -16,8 +16,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
-            Premium Web Development &{" "}
-            <span className="text-gradient-primary">Digital Solutions</span>
+            Premium Web Development, Managed Help Desk and{" "}
+            <span className="text-gradient-primary">Professional PDF Guides</span>
           </h1>
         </motion.div>
 

@@ -16,8 +16,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
-            Premium Web Development &{" "}
-            <span className="text-gradient-primary">Digital Solutions</span>
+            Premium Web Development, Managed Help Desk and{" "}
+            <span className="text-gradient-primary">Professional PDF Guides</span>
           </h1>
         </motion.div>
 
@@ -48,8 +48,8 @@ const HeroSection = () => {
           className="mt-10 max-w-3xl mx-auto"
         >
           <p className="relative text-2xl md:text-4xl font-display font-bold leading-tight tracking-tight">
-            <span className="text-foreground">We help businesses turn their websites into </span>
-            <span className="text-gradient-primary">lead-generating machines</span>
+            <span className="text-foreground">20+ Experience & </span>
+            <span className="text-gradient-primary">White Glove Customer Service</span>
           </p>
           <div className="mx-auto mt-4 h-[2px] w-32 bg-gradient-to-r from-transparent via-primary to-transparent" />
         </motion.div>

@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { FileText, Download, ShieldCheck, Sparkles } from "lucide-react";
+import { FileText, ShieldCheck, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import coverEbola from "@/assets/cover-ebola.png";
+import coverDadbod from "@/assets/cover-dadbod.png";
 
 const PAY_LINK = "https://buy.stripe.com/3cI8wQ3jW7571D19LI7Zu0d";
 
@@ -9,7 +11,7 @@ type Guide = {
   title: string;
   description: string;
   category: string;
-  pdfUrl?: string;
+  cover?: string;
 };
 
 const guides: Guide[] = [
@@ -17,9 +19,14 @@ const guides: Guide[] = [
     title: "Ebola 2026 Emergency Intelligence Report",
     description: "Comprehensive emergency intelligence briefing with outbreak analysis, response protocols and preparedness frameworks.",
     category: "Health & Safety",
-    pdfUrl: "/guides/ebola-2026-emergency-intelligence-report.pdf",
+    cover: coverEbola,
   },
-  { title: "Small Business Cybersecurity Starter Kit", description: "Step-by-step hardening checklist for small business networks, endpoints and email.", category: "Cybersecurity" },
+  {
+    title: "The 15-Minute Dad Bod Shred",
+    description: "Hyper-efficient Garage Workouts for Busy Dads — torch fat, build muscle, and transform your body before the kids wake up.",
+    category: "Fitness",
+    cover: coverDadbod,
+  },
   { title: "Office 365 Admin Mastery", description: "Configure tenants, security baselines, conditional access and licensing the right way.", category: "Microsoft 365" },
   { title: "QuickBooks Setup & Optimization", description: "From chart of accounts to bank reconciliation — a clean QuickBooks build, end to end.", category: "Accounting" },
   { title: "Argus Enterprise Workflow Guide", description: "Real estate financial modeling in Argus with reusable templates and shortcuts.", category: "Real Estate" },

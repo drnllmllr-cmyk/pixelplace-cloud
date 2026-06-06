@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { Globe, Shield, Mail, Search, Wrench, Award, Clock, Users, Star } from "lucide-react";
+import { Globe, Shield, Mail, Search, Wrench, Award, Clock, Users, Star, Briefcase, Code, Cpu, Heart } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useNavigate, useLocation } from "react-router-dom";
+import founderImg from "@/assets/founder-darnell.png";
 
 const services = [
   { icon: Globe, title: "Websites & Web Apps", desc: "Custom, fast, and built to convert" },
@@ -17,6 +18,15 @@ const stats = [
   { icon: Users, value: "500+", label: "Clients Served" },
   { icon: Star, value: "99%", label: "Client Satisfaction" },
   { icon: Award, value: "1000+", label: "Projects Delivered" },
+];
+
+const experience = [
+  "NASA Headquarters",
+  "The Federal Reserve Board",
+  "Major financial and real estate organizations",
+  "Federal and government agencies",
+  "Small businesses and startups",
+  "Enterprise technology environments",
 ];
 
 const About = () => {
@@ -36,7 +46,7 @@ const About = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
+      <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -45,33 +55,131 @@ const About = () => {
               <span className="text-sm font-display text-primary">Over Two Decades of Excellence</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
-              About <span className="text-gradient-primary">PixelPlace</span>
+              About <span className="text-gradient-primary">PixelPlace.cloud</span>
             </h1>
-            <div className="max-w-4xl mx-auto space-y-6">
-              <p className="text-xl md:text-3xl font-display font-semibold leading-snug">
-                <span className="text-foreground">At </span>
-                <span className="text-gradient-primary">PixelPlace.cloud</span>
-                <span className="text-foreground">, we build </span>
-                <span className="text-gradient-primary italic">fast, modern websites and applications</span>
-                <span className="text-foreground"> that help businesses attract customers and grow.</span>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Meet The Founder */}
+      <section className="relative py-16 overflow-hidden">
+        <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute -bottom-20 -right-20 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[140px] pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-xs md:text-sm font-display uppercase tracking-[0.3em] text-primary mb-3">Meet The Founder</p>
+            <h2 className="text-4xl md:text-6xl font-display font-bold">
+              <span className="text-gradient-primary">Darnell Miller</span>
+            </h2>
+            <p className="mt-3 text-base md:text-lg text-muted-foreground">
+              Founder &amp; Principal Technology Consultant
+            </p>
+            <div className="mx-auto mt-6 h-[2px] w-32 bg-gradient-to-r from-transparent via-primary to-transparent" />
+          </motion.div>
+
+          <div className="grid lg:grid-cols-[auto,1fr] gap-10 lg:gap-14 items-start max-w-6xl mx-auto">
+            {/* Portrait */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative mx-auto lg:mx-0 w-full max-w-sm"
+            >
+              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-primary/40 via-secondary/30 to-accent/40 blur-xl opacity-70" />
+              <div className="relative glass rounded-3xl p-2 border border-primary/30 overflow-hidden card-glow">
+                <img
+                  src={founderImg}
+                  alt="Darnell Miller, Founder of PixelPlace.cloud"
+                  className="rounded-2xl w-full h-auto object-cover aspect-[3/4]"
+                />
+                <div className="absolute bottom-4 left-4 right-4 glass rounded-xl px-4 py-3 border border-primary/30 backdrop-blur-md">
+                  <p className="text-xs uppercase tracking-widest text-primary font-display">Founder</p>
+                  <p className="text-base font-display font-semibold text-foreground">Darnell Miller</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Story */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-5 text-foreground/85 leading-relaxed"
+            >
+              <p>
+                For more than <span className="text-primary font-semibold">20 years</span>, Darnell Miller has helped organizations solve technology challenges ranging from everyday support issues to enterprise infrastructure, cybersecurity, and web development.
+              </p>
+              <p>
+                His journey began at just <span className="text-foreground font-semibold">15 years old</span> as an Audio/Visual Technology Intern, where he developed a passion for technology and engineering. During high school, he completed specialized technical programs focused on computer-aided design (CAD), creating architectural floor plans and technical drawings using <span className="text-foreground font-semibold">AutoCAD and Autodesk Inventor</span>.
+              </p>
+              <p>
+                After competing in semi-professional football, Darnell made the decision to pursue technology full-time and began building what would become a two-decade career spanning help desk operations, systems administration, network engineering, cybersecurity, and software development.
+              </p>
+              <p>
+                Throughout his career, he has supported organizations ranging from small businesses and managed service providers to some of the most recognized institutions in the United States.
               </p>
 
-              <div className="mx-auto h-[2px] w-32 bg-gradient-to-r from-transparent via-primary to-transparent" />
-
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Led by two senior tech professionals with <span className="text-primary font-semibold">20+ years of experience</span>, we've worked with organizations including <span className="text-foreground font-semibold">NASA Headquarters</span>, the <span className="text-foreground font-semibold">Federal Reserve</span>, and law enforcement agencies, delivering <span className="text-primary font-semibold">500+ successful projects</span> across small businesses and enterprise environments.
-              </p>
-
-              <div className="glass rounded-2xl p-6 md:p-8 border border-primary/20 card-glow">
-                <p className="text-base md:text-lg text-foreground font-semibold leading-relaxed">
-                  No outsourcing. No junior developers. <span className="text-gradient-primary">Just real experience</span>, clean execution, and results that make your business look professional and credible online.
+              {/* Experience list */}
+              <div className="glass rounded-2xl p-6 border border-primary/20 card-glow">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary font-display mb-4 flex items-center gap-2">
+                  <Briefcase size={14} /> His experience includes work with
                 </p>
+                <ul className="grid sm:grid-cols-2 gap-y-2 gap-x-6">
+                  {experience.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-foreground/90">
+                      <span className="text-primary mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <p className="text-xl md:text-2xl font-display font-bold tracking-tight">
-                <span className="text-gradient-primary">Enterprise-level quality</span>
-                <span className="text-foreground"> — without the enterprise price.</span>
+              <p>
+                In <span className="text-foreground font-semibold">2017</span>, Darnell served on the <span className="text-foreground font-semibold">NASA Headquarters Information Technology and Telecommunications Services (HITTS)</span> contract, supporting executives, managers, developers, and mission-critical operations across Washington D.C. and Arlington, Virginia.
               </p>
+              <p>
+                As his career evolved, he expanded into <span className="text-primary font-semibold">cybersecurity and penetration testing</span>, helping organizations identify vulnerabilities and strengthen their security posture. He later completed advanced full-stack web development training, adding modern web application development to an already extensive technical background.
+              </p>
+              <p>
+                Today, Darnell combines his experience in infrastructure, cybersecurity, support operations, and web development to help businesses build reliable, secure, and professional technology solutions.
+              </p>
+              <p>
+                Whether developing a website, improving business operations, providing technical support, or consulting on cybersecurity initiatives, his focus remains the same.
+              </p>
+              <p className="flex items-start gap-3 text-foreground/90">
+                <Heart size={20} className="text-primary mt-1 shrink-0" />
+                <span>
+                  Outside of technology, Darnell is a dedicated <span className="text-foreground font-semibold">father of four</span> who values family, continuous learning, fitness, and personal growth. When he's away from the keyboard, you'll often find him enjoying time with his children or surfing a good wave whenever the opportunity presents itself.
+                </span>
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Mission Statement */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto mt-16"
+          >
+            <div className="relative group">
+              <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-neon-cyan/40 via-primary/40 to-neon-purple/40 opacity-70 blur-sm" />
+              <div className="relative glass-strong rounded-2xl p-8 md:p-10 border border-primary/30">
+                <p className="text-xs uppercase tracking-[0.3em] text-primary font-display mb-3 flex items-center gap-2">
+                  <Cpu size={14} /> Mission Statement
+                </p>
+                <p className="text-xl md:text-2xl font-display font-semibold leading-snug text-foreground">
+                  "I believe technology should help businesses{" "}
+                  <span className="text-gradient-primary">grow, operate more efficiently,</span> and present themselves{" "}
+                  <span className="text-gradient-primary">professionally online.</span>"
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

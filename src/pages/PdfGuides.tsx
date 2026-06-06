@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { FileText, Download, ShieldCheck, Sparkles } from "lucide-react";
+import { FileText, ShieldCheck, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import coverEbola from "@/assets/cover-ebola.png";
+import coverDadbod from "@/assets/cover-dadbod.png";
 
 const PAY_LINK = "https://buy.stripe.com/3cI8wQ3jW7571D19LI7Zu0d";
 
@@ -9,7 +11,7 @@ type Guide = {
   title: string;
   description: string;
   category: string;
-  pdfUrl?: string;
+  cover?: string;
 };
 
 const guides: Guide[] = [
@@ -17,9 +19,14 @@ const guides: Guide[] = [
     title: "Ebola 2026 Emergency Intelligence Report",
     description: "Comprehensive emergency intelligence briefing with outbreak analysis, response protocols and preparedness frameworks.",
     category: "Health & Safety",
-    pdfUrl: "/guides/ebola-2026-emergency-intelligence-report.pdf",
+    cover: coverEbola,
   },
-  { title: "Small Business Cybersecurity Starter Kit", description: "Step-by-step hardening checklist for small business networks, endpoints and email.", category: "Cybersecurity" },
+  {
+    title: "The 15-Minute Dad Bod Shred",
+    description: "Hyper-efficient Garage Workouts for Busy Dads — torch fat, build muscle, and transform your body before the kids wake up.",
+    category: "Fitness",
+    cover: coverDadbod,
+  },
   { title: "Office 365 Admin Mastery", description: "Configure tenants, security baselines, conditional access and licensing the right way.", category: "Microsoft 365" },
   { title: "QuickBooks Setup & Optimization", description: "From chart of accounts to bank reconciliation — a clean QuickBooks build, end to end.", category: "Accounting" },
   { title: "Argus Enterprise Workflow Guide", description: "Real estate financial modeling in Argus with reusable templates and shortcuts.", category: "Real Estate" },
@@ -108,12 +115,26 @@ const PdfGuides = () => {
                 transition={{ delay: Math.min(i * 0.03, 0.4) }}
                 className="group glass card-glow rounded-2xl p-6 flex flex-col border border-border/40"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground">
-                    <FileText size={22} />
+                {g.cover ? (
+                  <div className="relative mb-5 rounded-xl overflow-hidden border border-primary/20 bg-black/40 aspect-[3/4]">
+                    <img
+                      src={g.cover}
+                      alt={`${g.title} cover`}
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                      loading="lazy"
+                    />
+                    <span className="absolute top-3 left-3 text-[10px] font-display uppercase tracking-wider text-primary bg-background/70 backdrop-blur px-2 py-1 rounded-md border border-primary/30">
+                      {g.category}
+                    </span>
                   </div>
-                  <span className="text-xs font-display uppercase tracking-wider text-primary/80">{g.category}</span>
-                </div>
+                ) : (
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground">
+                      <FileText size={22} />
+                    </div>
+                    <span className="text-xs font-display uppercase tracking-wider text-primary/80">{g.category}</span>
+                  </div>
+                )}
                 <h3 className="font-display text-lg font-semibold mb-2 text-foreground leading-snug">{g.title}</h3>
                 <p className="text-sm text-muted-foreground mb-6 flex-1 leading-relaxed">{g.description}</p>
                 <div className="flex items-center justify-between mb-4">
@@ -122,26 +143,14 @@ const PdfGuides = () => {
                     <ShieldCheck size={14} className="text-primary" /> Secure checkout
                   </span>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <a
-                    href={PAY_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-glow w-full py-3 rounded-xl font-display font-semibold text-sm text-primary-foreground text-center"
-                  >
-                    Buy & Download
-                  </a>
-                  {g.pdfUrl && (
-                    <a
-                      href={g.pdfUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full py-2 rounded-xl font-display font-medium text-xs text-foreground/80 hover:text-primary border border-border/50 hover:border-primary/40 text-center inline-flex items-center justify-center gap-2 transition-colors"
-                    >
-                      <Download size={14} /> Preview sample
-                    </a>
-                  )}
-                </div>
+                <a
+                  href={PAY_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-glow w-full py-3 rounded-xl font-display font-semibold text-sm text-primary-foreground text-center"
+                >
+                  Buy & Download
+                </a>
               </motion.div>
             ))}
           </div>

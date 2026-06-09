@@ -4,6 +4,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import coverEbola from "@/assets/cover-ebola.png";
 import coverDadbod from "@/assets/cover-dadbod.png";
+import coverVerticalLiving from "@/assets/cover-vertical-living.png";
+import coverAITravel from "@/assets/cover-ai-travel-architect.png";
+import coverAISideHustle from "@/assets/cover-ai-side-hustle.png";
+import coverToddlerSnack from "@/assets/cover-toddler-plane-snack.png";
+import coverDigitalDeclutter from "@/assets/cover-digital-declutter.png";
+import coverBoundaryScript from "@/assets/cover-boundary-script.png";
+import coverRomanticizing from "@/assets/cover-romanticizing-life.png";
+import coverFriendshipReset from "@/assets/cover-friendship-reset.png";
+import coverMicroHabit from "@/assets/cover-micro-habit-stacking.png";
+import coverIntentionalMorning from "@/assets/cover-intentional-morning.png";
+import coverProteinBreakfast from "@/assets/cover-protein-breakfast.png";
+import coverMagnesiumMap from "@/assets/cover-magnesium-map.png";
+import coverSomaticHealing from "@/assets/cover-somatic-healing.png";
 
 const PAY_LINK = "https://buy.stripe.com/3cI8wQ3jW7571D19LI7Zu0d";
 

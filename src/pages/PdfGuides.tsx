@@ -53,6 +53,7 @@ const guides: Guide[] = [
   { title: "The 30g Protein Breakfast Club", description: "50 quick recipes to hit your daily targets — muscle preservation, high satiety meals, fast prep.", category: "Nutrition", cover: coverProteinBreakfast },
   { title: "The Magnesium Map", description: "Choosing the right form for sleep, stress, and energy — glycinate vs citrate, science-based guide.", category: "Health", cover: coverMagnesiumMap },
   { title: "Somatic Healing for Stress", description: "10-minute daily movements to release stored trauma — nervous system regulation and gentle daily practice.", category: "Wellness", cover: coverSomaticHealing },
+  { title: "Office 365 Admin Mastery", description: "Configure tenants, security baselines, conditional access and licensing the right way.", category: "Microsoft 365" },
   { title: "QuickBooks Setup & Optimization", description: "From chart of accounts to bank reconciliation — a clean QuickBooks build, end to end.", category: "Accounting" },
   { title: "Argus Enterprise Workflow Guide", description: "Real estate financial modeling in Argus with reusable templates and shortcuts.", category: "Real Estate" },
   { title: "Wolters Kluwer CCH Axcess Playbook", description: "Tax workflow optimization, e-filing and document management in CCH Axcess.", category: "Tax" },

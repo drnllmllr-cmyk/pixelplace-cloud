@@ -164,7 +164,7 @@ const PdfGuides = () => {
                 <h3 className="font-display text-lg font-semibold mb-2 text-foreground leading-snug">{g.title}</h3>
                 <p className="text-sm text-muted-foreground mb-6 flex-1 leading-relaxed">{g.description}</p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-display font-bold text-foreground">$9.99</span>
+                  <span className="text-2xl font-display font-bold text-foreground">$10.99</span>
                   <span className="text-xs text-muted-foreground flex items-center gap-1">
                     <ShieldCheck size={14} className="text-primary" /> Secure checkout
                   </span>

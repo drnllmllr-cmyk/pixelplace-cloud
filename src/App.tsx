@@ -9,6 +9,7 @@ import WebDevelopment from "./pages/WebDevelopment";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import PdfGuides from "./pages/PdfGuides";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import HelpDeskSupport from "./pages/HelpDeskSupport";
 
 import NotFound from "./pages/NotFound";

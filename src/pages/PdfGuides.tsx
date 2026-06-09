@@ -4,6 +4,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import coverEbola from "@/assets/cover-ebola.png";
 import coverDadbod from "@/assets/cover-dadbod.png";
+import coverVerticalLiving from "@/assets/cover-vertical-living.png";
+import coverAITravel from "@/assets/cover-ai-travel-architect.png";
+import coverAISideHustle from "@/assets/cover-ai-side-hustle.png";
+import coverToddlerSnack from "@/assets/cover-toddler-plane-snack.png";
+import coverDigitalDeclutter from "@/assets/cover-digital-declutter.png";
+import coverBoundaryScript from "@/assets/cover-boundary-script.png";
+import coverRomanticizing from "@/assets/cover-romanticizing-life.png";
+import coverFriendshipReset from "@/assets/cover-friendship-reset.png";
+import coverMicroHabit from "@/assets/cover-micro-habit-stacking.png";
+import coverIntentionalMorning from "@/assets/cover-intentional-morning.png";
+import coverProteinBreakfast from "@/assets/cover-protein-breakfast.png";
+import coverMagnesiumMap from "@/assets/cover-magnesium-map.png";
+import coverSomaticHealing from "@/assets/cover-somatic-healing.png";
 
 const PAY_LINK = "https://buy.stripe.com/3cI8wQ3jW7571D19LI7Zu0d";
 
@@ -27,6 +40,19 @@ const guides: Guide[] = [
     category: "Fitness",
     cover: coverDadbod,
   },
+  { title: "Vertical Living: Maximizing Space for Your Apartment Cat", description: "The Urban Cat Blueprint — small-space catification, stylish climbing systems, and designer-friendly solutions.", category: "Pets & Lifestyle", cover: coverVerticalLiving },
+  { title: "The AI Travel Architect", description: "Prompt libraries for custom itineraries — budget optimization, hidden gem destinations, and weekend escape prompts.", category: "AI & Travel", cover: coverAITravel },
+  { title: "The AI Side Hustle Handbook", description: "5 ways to earn with ChatGPT this week — no coding required, fast income systems, AI-powered opportunities.", category: "AI & Income", cover: coverAISideHustle },
+  { title: "The Toddler Plane-Snack Architecture Guide", description: "Travel strategies that actually work — stress-free flights, slow-eat snacks, and parent-tested systems.", category: "Parenting", cover: coverToddlerSnack },
+  { title: "30-Day Digital Declutter", description: "The minimalist tech guide — reduce screen time, mental clarity, simplify your apps, and reclaim your attention.", category: "Productivity", cover: coverDigitalDeclutter },
+  { title: "The Boundary Script Book", description: "Word-for-word responses for difficult people — set limits without the guilt at work and with family.", category: "Self-Help", cover: coverBoundaryScript },
+  { title: "Romanticizing Your Ordinary Life", description: "The aesthetic habit tracker — main character energy, mindful living, beautiful routines, and daily joy.", category: "Lifestyle", cover: coverRomanticizing },
+  { title: "The Friendship Reset", description: "Making and keeping adult friends — meaningful connections, modern social skills, and friendship frameworks.", category: "Relationships", cover: coverFriendshipReset },
+  { title: "Micro-Habit Stacking for Busy Parents", description: "2-minute wins, atomic habits for families, stress reduction — small changes, big results.", category: "Parenting", cover: coverMicroHabit },
+  { title: "The Intentional Morning", description: "A guide to low-dopamine rises — protect your focus, no morning scrolling, mental clarity, healthy rituals.", category: "Wellness", cover: coverIntentionalMorning },
+  { title: "The 30g Protein Breakfast Club", description: "50 quick recipes to hit your daily targets — muscle preservation, high satiety meals, fast prep.", category: "Nutrition", cover: coverProteinBreakfast },
+  { title: "The Magnesium Map", description: "Choosing the right form for sleep, stress, and energy — glycinate vs citrate, science-based guide.", category: "Health", cover: coverMagnesiumMap },
+  { title: "Somatic Healing for Stress", description: "10-minute daily movements to release stored trauma — nervous system regulation and gentle daily practice.", category: "Wellness", cover: coverSomaticHealing },
   { title: "Office 365 Admin Mastery", description: "Configure tenants, security baselines, conditional access and licensing the right way.", category: "Microsoft 365" },
   { title: "QuickBooks Setup & Optimization", description: "From chart of accounts to bank reconciliation — a clean QuickBooks build, end to end.", category: "Accounting" },
   { title: "Argus Enterprise Workflow Guide", description: "Real estate financial modeling in Argus with reusable templates and shortcuts.", category: "Real Estate" },
@@ -138,7 +164,7 @@ const PdfGuides = () => {
                 <h3 className="font-display text-lg font-semibold mb-2 text-foreground leading-snug">{g.title}</h3>
                 <p className="text-sm text-muted-foreground mb-6 flex-1 leading-relaxed">{g.description}</p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-display font-bold text-foreground">$9.99</span>
+                  <span className="text-2xl font-display font-bold text-foreground">$10.99</span>
                   <span className="text-xs text-muted-foreground flex items-center gap-1">
                     <ShieldCheck size={14} className="text-primary" /> Secure checkout
                   </span>

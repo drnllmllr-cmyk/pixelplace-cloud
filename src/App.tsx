@@ -9,6 +9,7 @@ import WebDevelopment from "./pages/WebDevelopment";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import PdfGuides from "./pages/PdfGuides";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import HelpDeskSupport from "./pages/HelpDeskSupport";
 
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/website-development" element={<WebDevelopment />} />
           <Route path="/pdf-guides" element={<PdfGuides />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/help-desk-support" element={<HelpDeskSupport />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />

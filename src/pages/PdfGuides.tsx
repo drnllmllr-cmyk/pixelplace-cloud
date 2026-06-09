@@ -116,17 +116,20 @@ const PdfGuides = () => {
                 className="group glass card-glow rounded-2xl p-6 flex flex-col border border-border/40"
               >
                 {g.cover ? (
-                  <div className="relative mb-5 rounded-xl overflow-hidden border border-primary/20 bg-black/40 aspect-[3/4]">
+                  <div className="relative mb-5 rounded-xl overflow-hidden border border-primary/20 bg-gradient-to-br from-background via-muted to-background aspect-[3/4] shadow-[0_10px_40px_-10px_hsl(186_100%_50%/0.25)]">
                     <img
                       src={g.cover}
                       alt={`${g.title} cover`}
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
                     />
-                    <span className="absolute top-3 left-3 text-[10px] font-display uppercase tracking-wider text-primary bg-background/70 backdrop-blur px-2 py-1 rounded-md border border-primary/30">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
+                    <span className="absolute top-3 left-3 z-10 text-[10px] font-display uppercase tracking-wider text-primary bg-background/80 backdrop-blur px-2 py-1 rounded-md border border-primary/30">
                       {g.category}
                     </span>
                   </div>
+
                 ) : (
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground">

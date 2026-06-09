@@ -53,55 +53,8 @@ const guides: Guide[] = [
   { title: "The 30g Protein Breakfast Club", description: "50 quick recipes to hit your daily targets — muscle preservation, high satiety meals, fast prep.", category: "Nutrition", cover: coverProteinBreakfast },
   { title: "The Magnesium Map", description: "Choosing the right form for sleep, stress, and energy — glycinate vs citrate, science-based guide.", category: "Health", cover: coverMagnesiumMap },
   { title: "Somatic Healing for Stress", description: "10-minute daily movements to release stored trauma — nervous system regulation and gentle daily practice.", category: "Wellness", cover: coverSomaticHealing },
-  { title: "Office 365 Admin Mastery", description: "Configure tenants, security baselines, conditional access and licensing the right way.", category: "Microsoft 365" },
-  { title: "QuickBooks Setup & Optimization", description: "From chart of accounts to bank reconciliation — a clean QuickBooks build, end to end.", category: "Accounting" },
-  { title: "Argus Enterprise Workflow Guide", description: "Real estate financial modeling in Argus with reusable templates and shortcuts.", category: "Real Estate" },
-  { title: "Wolters Kluwer CCH Axcess Playbook", description: "Tax workflow optimization, e-filing and document management in CCH Axcess.", category: "Tax" },
-  { title: "Marshall & Swift Valuation Guide", description: "Cost approach valuations done right — components, depreciation and reporting.", category: "Valuation" },
-  { title: "Bluebeam Revu for Construction Teams", description: "Markups, takeoffs, Studio Sessions and Studio Projects for field-to-office collaboration.", category: "Construction" },
-  { title: "Google Workspace Admin Blueprint", description: "Domain setup, security, DLP, Vault and user lifecycle automation.", category: "Google Workspace" },
-  { title: "Canon Printer Deployment Manual", description: "Driver packaging, secure print, scan-to-folder and troubleshooting Canon fleets.", category: "Printer Support" },
-  { title: "HP Printer Enterprise Support Guide", description: "JetAdmin, firmware management, secure printing and queue troubleshooting.", category: "Printer Support" },
-  { title: "Xerox Workplace Cloud Handbook", description: "Centralized print management, pull printing and analytics for Xerox fleets.", category: "Printer Support" },
-  { title: "Windows Print Server Build Guide", description: "Build a resilient, secure print server with proper drivers and monitoring.", category: "Servers" },
-  { title: "File Server & Permissions Playbook", description: "NTFS, share permissions, ABE and Volume Shadow Copy done properly.", category: "Servers" },
-  { title: "Network Administration Field Guide", description: "Switching, routing, VLANs and firewalls for small business networks.", category: "Networking" },
-  { title: "Cloudflare Zero Trust for SMBs", description: "Access, Tunnel, Gateway and DLP for a modern remote workforce.", category: "Cybersecurity" },
-  { title: "WordPress Hardening & Performance", description: "Lock down WordPress, tune caching and ship Core Web Vitals that rank.", category: "Web Development" },
-  { title: "Shopify Storefront Optimization", description: "Theme tuning, app audits and CRO patterns that lift conversion.", category: "E-commerce" },
-  { title: "GoDaddy Domain & DNS Mastery", description: "DNS records, transfers, SSL and email deliverability through GoDaddy.", category: "Domains & DNS" },
-  { title: "GitHub for Small Teams", description: "Branching, PR reviews, Actions and deployment workflows that scale.", category: "DevOps" },
-  { title: "Dentist Office IT Operations Manual", description: "HIPAA-aligned IT setup for modern dental practices — imaging, PMS and backup.", category: "Healthcare IT" },
-  { title: "Law Firm Technology Stack Guide", description: "Document management, e-discovery readiness and secure client portals.", category: "Legal IT" },
-  { title: "Tax Firm Workflow Automation", description: "Client intake, document collection and review queues that save weeks per season.", category: "Tax" },
-  { title: "Construction Site Connectivity Guide", description: "Trailer Wi-Fi, point-to-point links, ruggedized devices and field comms.", category: "Construction" },
-  { title: "Gas Station IT & POS Support Guide", description: "Forecourt controllers, POS, surveillance and PCI compliance basics.", category: "Retail IT" },
-  { title: "MSP Onboarding Playbook", description: "Standardize client onboarding, documentation and tooling like a pro MSP.", category: "MSP" },
-  { title: "Disaster Recovery Planning Guide", description: "RTO/RPO, runbooks, immutable backups and tested recovery procedures.", category: "Business Continuity" },
-  { title: "Backup Strategy 3-2-1-1-0", description: "Modern backup architecture against ransomware with verified restores.", category: "Backups" },
-  { title: "Email Security & Anti-Phishing Guide", description: "SPF, DKIM, DMARC, anti-phishing posture and user awareness training.", category: "Cybersecurity" },
-  { title: "Penetration Testing Readiness", description: "Prepare your environment, scope and remediation pipeline for a real pentest.", category: "Cybersecurity" },
-  { title: "Vulnerability Management Program", description: "Scan, prioritize and remediate vulnerabilities on a repeatable cadence.", category: "Cybersecurity" },
-  { title: "Endpoint Hardening for Windows 11", description: "Baselines, ASR rules, BitLocker, AppLocker and tamper protection.", category: "Endpoint" },
-  { title: "macOS Business Deployment", description: "MDM, configuration profiles, FileVault and patching for Mac fleets.", category: "Endpoint" },
-  { title: "Active Directory Cleanup Guide", description: "OUs, GPOs, stale accounts and tiered admin done right.", category: "Identity" },
-  { title: "Azure AD / Entra ID Hardening", description: "Conditional Access, MFA, PIM and Identity Protection step-by-step.", category: "Identity" },
-  { title: "VPN to Zero Trust Migration", description: "Retire legacy VPN with a phased Zero Trust rollout for remote users.", category: "Networking" },
-  { title: "Firewall Configuration Best Practices", description: "Rule hygiene, segmentation, logging and tuning for SMB firewalls.", category: "Networking" },
-  { title: "Wi-Fi Survey & Design Guide", description: "Design and validate dependable enterprise Wi-Fi in any environment.", category: "Networking" },
-  { title: "VoIP Phone System Buyer's Guide", description: "Choose, deploy and tune a modern cloud phone system for your business.", category: "Communications" },
-  { title: "Microsoft Teams Governance", description: "Naming, lifecycle, guest access and external sharing controls.", category: "Microsoft 365" },
-  { title: "SharePoint Information Architecture", description: "Hub sites, permissions and search-friendly content design.", category: "Microsoft 365" },
-  { title: "Power Automate for Operations", description: "Practical automations that replace busywork in finance, HR and IT.", category: "Automation" },
-  { title: "SEO for Local Service Businesses", description: "Win local pack rankings with on-page, GBP and reviews strategy.", category: "Marketing" },
-  { title: "Website Speed Optimization", description: "Diagnose and fix Core Web Vitals on any modern site.", category: "Web Development" },
-  { title: "Google Analytics 4 Setup Guide", description: "Events, conversions, audiences and clean reports for decision makers.", category: "Analytics" },
-  { title: "Stripe Payments Implementation", description: "Checkout, subscriptions, webhooks and reconciliation done correctly.", category: "Payments" },
-  { title: "PCI-DSS Compliance Starter", description: "Scope reduction, SAQ selection and evidence collection workflow.", category: "Compliance" },
-  { title: "HIPAA Compliance for Small Practices", description: "Risk analysis, safeguards, BAAs and incident response essentials.", category: "Compliance" },
-  { title: "SOC 2 Readiness Roadmap", description: "Controls, policies and evidence to pass your first Type 1.", category: "Compliance" },
-  { title: "Incident Response Playbook", description: "Detect, contain, eradicate, recover — a ready-to-use IR runbook.", category: "Cybersecurity" },
 ];
+
 
 const PdfGuides = () => {
   return (
@@ -125,6 +78,27 @@ const PdfGuides = () => {
             <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
               Step-by-step PDF guides built for you.
             </p>
+
+            {/* Attention-grabbing animated tagline */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="mt-10 flex justify-center"
+            >
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-2xl blur-lg opacity-60 group-hover:opacity-90 transition-opacity animate-pulse" />
+                <div className="relative glass-strong rounded-2xl px-8 py-5 border border-primary/40 flex items-center gap-3">
+                  <Sparkles size={20} className="text-primary animate-pulse" />
+                  <span className="font-display font-bold text-xl md:text-2xl tracking-tight">
+                    <span className="text-gradient-primary">High-Quality PDF Guides</span>
+                    <span className="text-foreground/90"> that Help &amp; Give Solutions</span>
+                  </span>
+                  <Sparkles size={20} className="text-secondary animate-pulse" />
+                </div>
+              </div>
+            </motion.div>
+
           </motion.div>
         </div>
       </section>
@@ -142,17 +116,20 @@ const PdfGuides = () => {
                 className="group glass card-glow rounded-2xl p-6 flex flex-col border border-border/40"
               >
                 {g.cover ? (
-                  <div className="relative mb-5 rounded-xl overflow-hidden border border-primary/20 bg-black/40 aspect-[3/4]">
+                  <div className="relative mb-5 rounded-xl overflow-hidden border border-primary/20 bg-gradient-to-br from-background via-muted to-background aspect-[3/4] shadow-[0_10px_40px_-10px_hsl(186_100%_50%/0.25)]">
                     <img
                       src={g.cover}
                       alt={`${g.title} cover`}
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
+                      decoding="async"
                     />
-                    <span className="absolute top-3 left-3 text-[10px] font-display uppercase tracking-wider text-primary bg-background/70 backdrop-blur px-2 py-1 rounded-md border border-primary/30">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
+                    <span className="absolute top-3 left-3 z-10 text-[10px] font-display uppercase tracking-wider text-primary bg-background/80 backdrop-blur px-2 py-1 rounded-md border border-primary/30">
                       {g.category}
                     </span>
                   </div>
+
                 ) : (
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground">

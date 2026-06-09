@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Mail, Globe, Cookie, Lock, UserCheck, FileText, Baby, RefreshCw } from "lucide-react";
+import { ShieldCheck, Mail, Globe, Cookie, Lock, UserCheck, FileText, Baby, RefreshCw, LucideIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 type Section = {
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
   title: string;
   body?: string;
   bullets?: string[];

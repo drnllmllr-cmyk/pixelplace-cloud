@@ -78,6 +78,27 @@ const PdfGuides = () => {
             <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
               Step-by-step PDF guides built for you.
             </p>
+
+            {/* Attention-grabbing animated tagline */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="mt-10 flex justify-center"
+            >
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-2xl blur-lg opacity-60 group-hover:opacity-90 transition-opacity animate-pulse" />
+                <div className="relative glass-strong rounded-2xl px-8 py-5 border border-primary/40 flex items-center gap-3">
+                  <Sparkles size={20} className="text-primary animate-pulse" />
+                  <span className="font-display font-bold text-xl md:text-2xl tracking-tight">
+                    <span className="text-gradient-primary">High-Quality PDF Guides</span>
+                    <span className="text-foreground/90"> that Help &amp; Give Solutions</span>
+                  </span>
+                  <Sparkles size={20} className="text-secondary animate-pulse" />
+                </div>
+              </div>
+            </motion.div>
+
           </motion.div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import { Code, Layout, Smartphone, Rocket, Check, Globe, Monitor, Shield, Mail, 
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import VideoBackground from "@/components/VideoBackground";
 
 const features = [
   { icon: Code, title: "Custom Web Apps", desc: "Tailored web applications built with modern frameworks for speed and reliability." },
@@ -129,6 +130,7 @@ const WebDevelopment = () => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-24 overflow-hidden">
+        <VideoBackground opacity={0.4} overlay={0.6} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>

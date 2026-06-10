@@ -1,15 +1,25 @@
 import { motion } from "framer-motion";
 import { Sparkles, Code2, Headphones, FileText, ArrowRight } from "lucide-react";
 import ParticleField from "./ParticleField";
+import VideoBackground from "./VideoBackground";
+
+const headlineLines = [
+  { prefix: "Premium ", accent: "Web Development", suffix: "," },
+  { prefix: "Managed ", accent: "Help Desk", suffix: "" },
+  { prefix: "and ", accent: "Professional PDF Guides", suffix: "" },
+];
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden bg-grid pt-28 pb-16 md:pt-32 md:pb-20">
+      {/* HD looping background video */}
+      <VideoBackground opacity={0.45} overlay={0.55} />
+
       <ParticleField />
-      <div className="absolute inset-0 bg-radial-glow" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-neon-purple/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-primary/[0.03] rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-radial-glow pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-neon-purple/10 rounded-full blur-3xl animate-pulse-glow pointer-events-none" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-primary/[0.03] rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         {/* Eyebrow badge */}
@@ -25,26 +35,41 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Headline */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-        >
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-4 leading-[1.05] tracking-tight">
-            <span className="block text-foreground">Premium Web Development,</span>
-            <span className="block mt-2 text-foreground">Managed Help Desk</span>
-            <span className="block mt-2">
-              <span className="text-foreground">and </span>
-              <span className="relative inline-block">
-                <span className="text-gradient-primary drop-shadow-[0_0_30px_hsl(var(--primary)/0.5)]">
-                  Professional PDF Guides
-                </span>
-                <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent" />
+        {/* Headline — rolls in line by line */}
+        <div className="mb-4 [perspective:1200px]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight">
+            {headlineLines.map((line, i) => (
+              <span key={i} className="block overflow-hidden py-1">
+                <motion.span
+                  className="inline-block"
+                  initial={{ y: "110%", opacity: 0, rotateX: -55, filter: "blur(8px)" }}
+                  animate={{ y: "0%", opacity: 1, rotateX: 0, filter: "blur(0px)" }}
+                  transition={{
+                    duration: 0.9,
+                    delay: 0.25 + i * 0.35,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  style={{ transformOrigin: "50% 100%" }}
+                >
+                  <span className="text-foreground/95">{line.prefix}</span>
+                  <span className="relative inline-block">
+                    <span className="text-gradient-primary drop-shadow-[0_0_30px_hsl(var(--primary)/0.55)]">
+                      {line.accent}
+                    </span>
+                    <motion.span
+                      className="absolute -bottom-1 left-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent"
+                      initial={{ width: "0%" }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 0.7, delay: 0.6 + i * 0.35, ease: "easeOut" }}
+                    />
+                  </span>
+                  <span className="text-foreground/95">{line.suffix}</span>
+                </motion.span>
               </span>
-            </span>
+            ))}
           </h1>
-        </motion.div>
+        </div>
+
 
         {/* Service chips */}
         <motion.div

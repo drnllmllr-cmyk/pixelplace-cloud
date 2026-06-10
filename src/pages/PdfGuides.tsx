@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FileText, ShieldCheck, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import VideoBackground from "@/components/VideoBackground";
 import coverEbola from "@/assets/cover-ebola.png";
 import coverDadbod from "@/assets/cover-dadbod.png";
 import coverVerticalLiving from "@/assets/cover-vertical-living.png";
@@ -62,6 +63,7 @@ const PdfGuides = () => {
       <Navbar />
 
       <section className="relative pt-32 pb-16 overflow-hidden">
+        <VideoBackground opacity={0.4} overlay={0.6} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>

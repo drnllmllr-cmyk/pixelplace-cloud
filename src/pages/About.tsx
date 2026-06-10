@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useNavigate, useLocation } from "react-router-dom";
 import founderImg from "@/assets/founder-darnell.png";
+import serverRackImg from "@/assets/darnell-server-rack.png.asset.json";
 
 const services = [
   { icon: Globe, title: "Websites & Web Apps", desc: "Custom, fast, and built to convert" },
@@ -182,6 +183,67 @@ const About = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* In The Field */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute top-1/3 -left-32 w-[420px] h-[420px] bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-1/4 -right-24 w-[360px] h-[360px] bg-secondary/10 rounded-full blur-[140px] pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
+            {/* Copy — left */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-5"
+            >
+              <p className="text-xs md:text-sm font-display uppercase tracking-[0.3em] text-primary">
+                In The Field
+              </p>
+              <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight">
+                Hands-On <span className="text-gradient-primary">Infrastructure</span> Expertise
+              </h2>
+              <p className="text-foreground/85 leading-relaxed">
+                From network closets and server racks to cloud platforms and enterprise help desks —
+                Darnell brings real, hands-on experience to every project. No outsourced guesswork,
+                no theoretical advice. Just proven systems built and maintained by someone who has
+                actually wired the racks, configured the switches, and supported the users.
+              </p>
+              <ul className="grid sm:grid-cols-2 gap-y-2 gap-x-6 text-sm text-foreground/90">
+                {["Server & Rack Management","Network Engineering","Switch & Router Configuration","Cabling & Topology","Cloud & Hybrid Infrastructure","Endpoint & Server Support"].map((t) => (
+                  <li key={t} className="flex items-start gap-2">
+                    <span className="text-primary mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Image — right */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative mx-auto w-full max-w-md lg:max-w-lg"
+            >
+              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary/40 via-secondary/30 to-accent/40 blur-2xl opacity-70" />
+              <div className="relative glass rounded-3xl p-2 border border-primary/30 overflow-hidden card-glow">
+                <img
+                  src={serverRackImg.url}
+                  alt="Darnell Miller working on a network server rack"
+                  className="rounded-2xl w-full h-auto object-cover aspect-[3/4] block"
+                  loading="lazy"
+                />
+                <div className="absolute bottom-4 left-4 right-4 glass rounded-xl px-4 py-3 border border-primary/30 backdrop-blur-md">
+                  <p className="text-xs uppercase tracking-widest text-primary font-display">On Site</p>
+                  <p className="text-sm font-display font-semibold text-foreground">Network &amp; Server Infrastructure</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

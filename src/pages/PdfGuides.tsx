@@ -118,15 +118,15 @@ const PdfGuides = () => {
                 className="group glass card-glow rounded-2xl p-6 flex flex-col border border-border/40"
               >
                 {g.cover ? (
-                  <div className="relative mb-5 rounded-xl overflow-hidden border border-primary/20 bg-gradient-to-br from-background via-muted to-background aspect-[3/4] shadow-[0_10px_40px_-10px_hsl(186_100%_50%/0.25)]">
+                  <div className="relative mb-5 rounded-xl overflow-hidden border border-primary/20 bg-gradient-to-br from-background via-muted/40 to-background aspect-[3/4] shadow-[0_10px_40px_-10px_hsl(186_100%_50%/0.25)] flex items-center justify-center p-3">
                     <img
                       src={g.cover}
                       alt={`${g.title} cover`}
-                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                      className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-700 group-hover:scale-[1.03] drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)]"
                       loading="lazy"
                       decoding="async"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none" />
                     <span className="absolute top-3 left-3 z-10 text-[10px] font-display uppercase tracking-wider text-primary bg-background/80 backdrop-blur px-2 py-1 rounded-md border border-primary/30">
                       {g.category}
                     </span>

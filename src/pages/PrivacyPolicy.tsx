@@ -34,7 +34,7 @@ const sections: Section[] = [
       "Respond to inquiries and support requests",
       "Provide website development services",
       "Provide application development services",
-      "Deliver remote IT and Help Desk support",
+      "Deliver remote IT and Managed Support support",
       "Process purchases of digital products and PDF guides",
       "Improve our website and services",
       "Communicate updates regarding services",

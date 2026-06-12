@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Home", "Website Development", "Help Desk Support", "Professional PDF Guides", "About Us", "Blog"];
+const navItems = ["Home", "Website Development", "Managed Support", "Professional PDF Guides", "About Us", "Blog"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -31,8 +31,8 @@ const Navbar = () => {
       setOpen(false);
       return;
     }
-    if (sectionId === "help-desk-support") {
-      navigate("/help-desk-support");
+    if (sectionId === "managed-support" || sectionId === "help-desk-support") {
+      navigate("/managed-support");
       setOpen(false);
       return;
     }

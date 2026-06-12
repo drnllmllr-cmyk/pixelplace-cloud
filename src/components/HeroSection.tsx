@@ -5,7 +5,7 @@ import VideoBackground from "./VideoBackground";
 
 const headlineLines = [
   { prefix: "Premium ", accent: "Web Development", suffix: "," },
-  { prefix: "Managed ", accent: "Help Desk", suffix: "" },
+  { prefix: "", accent: "Managed Support", suffix: "" },
   { prefix: "and ", accent: "Professional PDF Guides", suffix: "" },
 ];
 
@@ -80,7 +80,7 @@ const HeroSection = () => {
         >
           {[
             { icon: Code2, label: "Web Development" },
-            { icon: Headphones, label: "Help Desk Support" },
+            { icon: Headphones, label: "Managed Support" },
             { icon: FileText, label: "PDF Guides" },
           ].map(({ icon: Icon, label }) => (
             <div

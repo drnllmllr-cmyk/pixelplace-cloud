@@ -5,7 +5,7 @@ import VideoBackground from "./VideoBackground";
 
 const headlineLines = [
   { prefix: "Premium ", accent: "Web Development", suffix: "," },
-  { prefix: "Managed ", accent: "Managed Support", suffix: "" },
+  { prefix: "", accent: "Managed Support", suffix: "" },
   { prefix: "and ", accent: "Professional PDF Guides", suffix: "" },
 ];
 

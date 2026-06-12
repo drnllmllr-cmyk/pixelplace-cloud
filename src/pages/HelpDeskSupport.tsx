@@ -88,7 +88,7 @@ const HelpDeskSupport = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/30 mb-8">
               <Headphones size={16} className="text-primary" />
-              <span className="text-sm font-display text-primary">Managed Managed Support</span>
+              <span className="text-sm font-display text-primary">Managed Support</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
               Premium <span className="text-gradient-primary">Managed Support</span>

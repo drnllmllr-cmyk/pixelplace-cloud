@@ -31,8 +31,8 @@ const Navbar = () => {
       setOpen(false);
       return;
     }
-    if (sectionId === "help-desk-support") {
-      navigate("/help-desk-support");
+    if (sectionId === "managed-support" || sectionId === "help-desk-support") {
+      navigate("/managed-support");
       setOpen(false);
       return;
     }

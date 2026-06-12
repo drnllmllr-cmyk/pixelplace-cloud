@@ -120,7 +120,7 @@ const About = () => {
                 His journey began at just <span className="text-foreground font-semibold">15 years old</span> as an Audio/Visual Technology Intern, where he developed a passion for technology and engineering. During high school, he completed specialized technical programs focused on computer-aided design (CAD), creating architectural floor plans and technical drawings using <span className="text-foreground font-semibold">AutoCAD and Autodesk Inventor</span>.
               </p>
               <p>
-                After competing in semi-professional football, Darnell made the decision to pursue technology full-time and began building what would become a two-decade career spanning help desk operations, systems administration, network engineering, cybersecurity, and software development.
+                After competing in semi-professional football, Darnell made the decision to pursue technology full-time and began building what would become a two-decade career spanning managed support operations, systems administration, network engineering, cybersecurity, and software development.
               </p>
               <p>
                 Throughout his career, he has supported organizations ranging from small businesses and managed service providers to some of the most recognized institutions in the United States.
@@ -207,7 +207,7 @@ const About = () => {
                 Hands-On <span className="text-gradient-primary">Infrastructure</span> Expertise
               </h2>
               <p className="text-foreground/85 leading-relaxed">
-                From network closets and server racks to cloud platforms and enterprise help desks —
+                From network closets and server racks to cloud platforms and enterprise managed supports —
                 Darnell brings real, hands-on experience to every project. No outsourced guesswork,
                 no theoretical advice. Just proven systems built and maintained by someone who has
                 actually wired the racks, configured the switches, and supported the users.

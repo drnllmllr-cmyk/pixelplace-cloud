@@ -46,7 +46,7 @@ const services = [
     gradient: "from-primary to-accent/60",
     popular: true,
     features: [
-      "Priority remote help desk",
+      "Priority remote managed support",
       "Patch & update management",
       "Endpoint monitoring",
       "Email & account administration",
@@ -59,10 +59,10 @@ const services = [
     name: "Business Support",
     price: "$899.00",
     period: "/per month",
-    description: "Full managed help desk for growing businesses across all platforms.",
+    description: "Full managed managed support for growing businesses across all platforms.",
     gradient: "from-accent to-primary/60",
     features: [
-      "Unlimited remote help desk",
+      "Unlimited remote managed support",
       "Server, network & printer management",
       "Office 365 / Google Workspace admin",
       "Backup & disaster recovery oversight",
@@ -88,10 +88,10 @@ const HelpDeskSupport = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/30 mb-8">
               <Headphones size={16} className="text-primary" />
-              <span className="text-sm font-display text-primary">Managed Help Desk</span>
+              <span className="text-sm font-display text-primary">Managed Managed Support</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
-              Premium <span className="text-gradient-primary">Help Desk Support</span>
+              Premium <span className="text-gradient-primary">Managed Support</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
               Real experience supporting MSPs, dentist offices, tax firms, law firms, construction sites,
